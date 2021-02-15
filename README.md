@@ -1,2 +1,0 @@
-# Practice
-Web dev practice
