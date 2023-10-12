@@ -67,7 +67,7 @@ a {
   font-weight: bold;
   color: white;
   text-align: center;
-  width: 14.2857%;
+  width: 12.5%;
   padding-top: 10px;
   padding-bottom: 10px;
   text-decoration: none;
@@ -166,4 +166,20 @@ a {
 
 .mySlides {
   display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  #hodMessage{
+    flex-direction: column;
+    align-items: center;
+  }
+  #hodImg{
+    height: 240px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #hodImg{
+    height: 200px;
+  }
 }
