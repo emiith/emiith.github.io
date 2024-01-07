@@ -136,8 +136,10 @@ a {
 .students-row {
   display: grid;
   /* grid-template-columns: 33.33% 33.33% 33.33%; */
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-gap: 30px;
+  /* grid-template-columns: 25% 25% 25% 25%; */
+  /* grid-template-columns: 20% 20% 20% 20% 20%; */
+  grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+  grid-gap: 10px;
   margin-bottom: 40px;
 }
 
@@ -147,8 +149,8 @@ a {
 }
 
 .student-img {
-  width: 240px;
-  height: 240px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
   padding: 0;
 }
