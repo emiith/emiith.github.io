@@ -144,17 +144,17 @@ a {
   /* grid-template-columns: 25% 25% 25% 25%; */
   /* grid-template-columns: 20% 20% 20% 20% 20%; */
   grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
-  grid-gap: 30px;
   margin-bottom: 40px;
 }
 
 .student-card {
   display: flex;
   flex-direction: column;
+  width: 95%;
 }
 
 .student-img {
-  width: 200px;
+  width: 100%;
   height: 200px;
   object-fit: contain;
   padding: 0;
@@ -164,10 +164,12 @@ a {
   display: flex;
   flex-direction: column;
   margin-top: 12px;
+  overflow-wrap: break-word;
 }
 
 .student-details p {
-  font-size: 18px;
+  /* font-size: 18px; */
+  /* font-weight: 700; */
   margin: 0;
 }
 
@@ -177,7 +179,7 @@ a {
 
 @media (min-width: 993px) and (max-width: 1300px) {
   .student-img {
-    width: 180px;
+    width: 100%;
     height: 180px;
     object-fit: contain;
     padding: 0;
@@ -197,7 +199,7 @@ a {
     height: 240px;
   }
   .student-img {
-    width: 160px;
+    width: 100%;
     height: 160px;
     object-fit: contain;
     padding: 0;
