@@ -19,9 +19,12 @@ body {
 
 /* header */
 header {
+    position: sticky;
+    top: 0;
     background: #ffffff;
     border-bottom: 1px solid #eee;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 header .navbar-toggler:focus {
@@ -187,7 +190,7 @@ footer {
     color: #999;
     margin-bottom: 0px;
     background-color: #171e27;
-    padding: 40px 0;
+    padding: 40px 0 0 0;
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
@@ -271,7 +274,9 @@ footer .powered-by img {
 .social-links{
     display: flex;
     justify-content: center;
+    bottom: 0px;
     width: 100%;
+    padding: 20px;
 }
 
 .social-links a{
