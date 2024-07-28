@@ -302,8 +302,24 @@ footer .powered-by img {
     border-radius: 50%;
 } 
 
-  
+ 
+
+
+
 /* Common */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
 
 /* Headings */
 .heading {
@@ -394,7 +410,7 @@ footer .powered-by img {
   right: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.9);
-  z-index: 2;
+  z-index: 2000;
   cursor: pointer;
   display: flex;
   justify-content: center;
