@@ -183,6 +183,62 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
     padding: 10px 0 0 0;
 }
 
+/* vision-mision */
+
+.vision-mision{
+    padding: 80px 0;
+}
+.vision-mision .heading{
+    background: #f8714c;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.vision-mision .mission{
+    margin-top: 80px;
+}
+
+.vision-mision .card{
+    margin-top: 42px;
+    padding: 24px;
+    border: 2px solid #f8714c;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.vision-mision .card::before{
+    content: '';
+    position: absolute;
+    height: 62px;
+    top: -54px;
+    left: 45px;
+    background: #f8714c;
+    border: 2px solid #f8714c;
+    border-radius: 20px;
+}
+
+.vision-mision .card::after{
+    content: '';
+    position: absolute;
+    height: 62px;
+    left: auto;
+    right: 45px;
+    top: -54px;
+    background: #f8714c;
+    border: 2px solid #f8714c;
+    border-radius: 20px;
+}
+
+.vision-mision .img-box{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.vision-mision img{
+    width: 62%;
+}
+
 
 /* Footer */
 footer {
