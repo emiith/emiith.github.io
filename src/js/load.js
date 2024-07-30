@@ -49,13 +49,52 @@ function renderResearch(data) {
     });
 }
 
+
+// Faculty
+function renderFaculty(data) {
+    const container = document.getElementById('profilesContainer');
+    if (!container) return;
+
+    if (!Array.isArray(data.data)) {
+        throw new Error('Fetched data is not an array');
+    }
+
+    container.innerHTML = '';
+
+    data.data.slice(1).forEach(faculty => {
+        container.innerHTML += `
+            <div class="faculty-profile-card">
+            <img src="${faculty.image}" id="facultyImage" class="img-fluid" onerror="hideImg()"/>
+            <span class="card-title">
+                <h6>${faculty.name}</h6>
+                <p class="card-text designation">${faculty.designation}</p>
+                <div class="row txt">
+                    <small>${faculty.position}</small>
+                    <small>${faculty.department}</small>
+                </div>
+                </span>
+            <div class="card-body">
+                <p>Email: ${faculty.email}</p>
+                <div class="social-icons">
+                    <a href="${faculty.profile_link}"><i class="bi bi-person-circle"></i> Profile</a>
+                </div>
+            </div>
+        </div>
+        `;
+    });
+}
+
+
+
+
+
 // Events
 function renderEvents(data) {
     const upcomingEvents = document.getElementById('upcomingEvents');
     const latestEvents = document.getElementById('latestEvents');
     let upcomingEventsCount = 0;
     let latestEventsCount = 0;
-    
+
     if (!upcomingEvents) return;
     if (!latestEvents) return;
 
@@ -192,6 +231,12 @@ document.addEventListener("DOMContentLoaded", function() {
             url:'https://script.google.com/macros/s/AKfycbx-ZZ69ZxX0EQCcIPxPGUVECFNwkqeVlLCcaJOSEUn1IgdkgEYrVPEnAMNb69Zs8sCi9A/exec',
             render: renderEvents
         },
+        'faculty.html':{
+            url:'https://script.google.com/macros/s/AKfycbwz-M96z_h4xKt2jfMpqRls0sa8t7EgICumI4eSf-E-GaldJO1RfySYwT5ZSVORtH_w/exec',
+            render: renderFaculty
+        },
+
+
     };
 
     const page = location.pathname.split('/').pop();
