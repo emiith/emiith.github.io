@@ -84,8 +84,44 @@ function renderFaculty(data) {
     });
 }
 
+// Mtech Students
+function renderMtechStudents(data) {
+    const container = document.getElementById('profilesRow');
+    if (!container) return;
 
+    if (!Array.isArray(data.data)) {
+        throw new Error('Fetched data is not an array');
+    }
 
+    let upcoming_year = new URLSearchParams(window.location.search).get('year');
+    if(upcoming_year==null){
+        let date = new Date();
+        upcoming_year = date.getFullYear()+1;
+    }
+    document.getElementById('yearSelect').value = upcoming_year;
+
+    container.innerHTML = '';
+    data.data.slice(1).forEach(student => {
+        container.innerHTML += `
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="${student.image}" alt="${student.name}" class="card-img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${student.name}</h5>
+                                <p class="card-text">${student.roll_number}</p>
+                                <p class="card-text">${student.email}</p>
+                                <a href="${student.linkedin}"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        `;
+    });
+}
 
 
 // Events
@@ -234,6 +270,10 @@ document.addEventListener("DOMContentLoaded", function() {
         'faculty.html':{
             url:'https://script.google.com/macros/s/AKfycbwz-M96z_h4xKt2jfMpqRls0sa8t7EgICumI4eSf-E-GaldJO1RfySYwT5ZSVORtH_w/exec',
             render: renderFaculty
+        },
+        'm_tech_students.html':{
+            url:'https://script.google.com/macros/s/AKfycbwPvrFZIr1yQv1PcH_xM591gsJzjIsuv8U05TuDXQpEjJIMlac__4rq5vSccnRJG5HQZA/exec',
+            render: renderMtechStudents
         },
 
 

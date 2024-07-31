@@ -770,7 +770,7 @@ th {
 
 /* Form */
 .form-container {
-    display: none;
+    /* display: none; */
     position: relative;
     width: 100%;
     height: auto;

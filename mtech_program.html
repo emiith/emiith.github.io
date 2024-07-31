@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Entrepreneurship and Management | IIT Hyderabad</title>
+    <link rel="shortcut icon" href="./src/img/icons/logosmall.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/styles.css">
+
+    <script src="./src/js/load.js"></script>
+</head>
+<body>
+<!--Header-->
+<header>
+    <nav class="navbar navbar-expand-lg py-2 py-lg-3 shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href=".">
+                <div class="row logo-text-container">
+                    <div class="col p-0">
+                        <img src="./src/img/icons/logo.png" alt="University Logo" class="logo img-fluid">
+                    </div>
+                    <div class="col p-0 text">
+                        <span class="dp-text">Department of Entrepreneurship and Management</span>
+                        <span class="inst-text">Indian Institute of Technology Hyderabad</span>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-light"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html" id="home"><span>Home</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>About Us <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./v&m.html" id="vandm"> <span> Vision and Mission</span></a></li>
+                            <li><a class="dropdown-item" href="./director_message.html" id="director_message"> <span> The Director’s Message</span></a></li>
+                            <li><a class="dropdown-item" href="./hod_message.html" id="hod_message"> <span> The Head’s Message</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Programs <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="dropend">
+                                <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Academic Programs <i class="bi bi-chevron-right ms-3"></i></span></a>
+                                <ul class="dropdown-content dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="./minors_program.html" id="minor_pro"><span> Minor in Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./major_program.html" id="major_pro"><span> Major in Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> MTech in Techno-Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li>
+                            <!-- <li><a class="dropdown-item" href="./dual_degree_program.html" id="dualdegree_pro"><span>PhD</span></a></li> -->
+                                </ul>
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="./minors_program.html" id="minor_pro"><span> Minor in Entrepreneurship</span></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="./major_program.html" id="major_pro"><span> Major in Entrepreneurship</span></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> MTech in Techno-Entrepreneurship</span></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="./dual_degree_program.html" id="dualdegree_pro"><span>PhD</span></a></li> -->
+                            <li><a class="dropdown-item" href="./cirtifiedCourses_program.html" id="cirtificateCourses_pro"><span> Certificate Cources</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>People <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./faculty.html" id="drop_p"><span>Faculty</span></a></li>
+                            <li class="dropend">
+                                <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Student <i class="bi bi-chevron-right"></i></span></a>
+                                <ul class="dropdown-content dropdown-menu shadow">
+                                    <a class="dropdown-item" href="./m_tech_students.html" id="drop_p"><span>M.Tech</span></a>
+                                    <a class="dropdown-item" href="./phd_students.html" id="drop_p"><span>PHD</span></a>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="./staff.html" id="drop_p"><span>Staff</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./research.html" id="research"><span>Research</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./events.html" id="events"><span>Events</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="./blog_list.html" id="blog"><span>Startups</span></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html" id="contact"><span>Contact</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="col-lg-8 mx-auto">
+        <p class="heading mt-5"><span>MTech in Techno-Entrepreneurship</span></p>
+        <div class="program-details">
+            <h4>Course Structure and Curriculum of the MTech in Techno-Entrepreneurship AY 2024-26</h4>
+                <p><strong>Objectives of the Program:</strong></p>
+                <p>To nurture entrepreneurial mind-set among technology graduates and equip them with necessary 
+                    skills and knowledge in entrepreneurship.</p>
+                <p>To provide an ecosystem where the students can convert their entrepreneurial ideas into successful 
+                    ventures.</p>
+                <p><strong>Scope:</strong></p>
+                <p>Fresh and early career engineering graduates who are passionate about choosing entrepreneurship 
+                    as a career would be selected for the program.</p>
+                <p><strong>Salient Features:</strong></p>
+                <ul>
+                    <li>The program will be a completely self-sponsored one.</li>
+                    <li>Candidates with a BSc, B.Des, B.Arch, BTech or a BE degree including early career professionals with 60% Marks or equivalent CGPA are eligible.</li>
+                    <li>Selection will be based on a written test and interview.</li>
+                    <li>GATE or any other national level test scores are not required.</li>
+                </ul>
+
+                <h2>Course Structure</h2>
+
+    <table>
+        <tr>
+            <th>Semester Number</th>
+            <th>Courses</th>
+        </tr>
+        <tr>
+            <td>Semester 1</td>
+            <td>9 credits of core EM courses + 2 credits of Management Electives + 3 credits of Engineering Electives + 1 credit Communication Skills (15 Credits)</td>
+        </tr>
+        <tr>
+            <td>Semester 2</td>
+            <td>7 credits of core EM courses + 2 credits of Management Electives + 3 credits of Engineering Electives + 1 credit Industrial Lectures (13 Credits)</td>
+        </tr>
+        <tr>
+            <td>Semester 3</td>
+            <td>Project Stage I- Problem Definition & Business Plan Development and Mentoring (12 Credits)</td>
+        </tr>
+        <tr>
+            <td>Semester 4</td>
+            <td>Project Stage 2 – Developing a Prototype or Proof of Concept (12 Credits)</td>
+        </tr>
+    </table>
+
+    <h2>Semester 1</h2>
+    <table>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credits</th>
+        </tr>
+        <tr>
+            <td>EM5090</td>
+            <td>Core Accounting and Finance for Entrepreneurs</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>EM5110</td>
+            <td>Core Foundations of Techno-Entrepreneurship</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>EM5270</td>
+            <td>Core Entrepreneurial Marketing</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>LA1260</td>
+            <td>Elective Fundamentals of Organizational Structure</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>EM5020</td>
+            <td>Elective Innovation Management</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>EM5040</td>
+            <td>Elective Game Theory for Startups</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>EM5120</td>
+            <td>Elective Economics for Technocrats</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Offered by Respective Departments</td>
+            <td>Engineering Electives</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Offered by Liberal Arts Department</td>
+            <td>Communication Skills</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h2>Semester 2</h2>
+    <table>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credits</th>
+        </tr>
+        <tr>
+            <td>EM6040</td>
+            <td>Core Operational Entrepreneurship</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>EM6010</td>
+            <td>Core Strategic Management</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>EM6130</td>
+            <td>Core Introduction to Intellectual Property Rights</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>EM5130</td>
+            <td>Elective HR and Leadership</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>EM5170</td>
+            <td>Elective Foundation of Design Thinking for Entrepreneurship</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>EM5160</td>
+            <td>Elective Marketing Research</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>EM5390</td>
+            <td>Elective Start-up Financing</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Offered by Respective Departments</td>
+            <td>Engineering Electives</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>EM6096</td>
+            <td>Industry Lecture</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h2>Semester 3</h2>
+    <table>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credits</th>
+        </tr>
+        <tr>
+            <td>EM6085</td>
+            <td>Project Stage I- Problem Definition & Business Plan Development and Mentoring</td>
+            <td>12</td>
+        </tr>
+    </table>
+
+    <h2>Semester 4</h2>
+    <table>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credits</th>
+        </tr>
+        <tr>
+            <td>EM6095</td>
+            <td>Project Stage 2 – Developing a Prototype or Proof of Concept</td>
+            <td>12</td>
+        </tr>
+    </table>
+
+    <p><strong>Total Credits</strong> = 50 + 2 (Communication Skills and Industry Lecture)</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div class="row px-md-0">
+            <!-- <div class="d-flex">
+                <a class="" href="#">
+                    <img src="./src/img/icons/logo.png" class="img-fluid" alt="Logo">
+                    <sapn class="mx-2 em-txt">Department Of Entrepreneurship and Management</span>
+                </a>
+            </div> -->
+            <div class="row d-flex justify-content-between">
+                <div class="em-txt">
+                    <img src="./src/img/icons/logo.png" class="img-fluid" alt="Logo">
+                    <sapn>Department Of Entrepreneurship and Management</span>
+                </div>
+                <div class="col-lg-4">
+                    <address>
+                        <ul>
+                            <li>
+                                <span class="contact"><i class="bi bi-envelope"></i> office@em.iith.ac.in</span>
+                            </li>
+                        </ul>
+                            <span class="">
+                                Department Of Entrepreneurship and Management,<br>
+                                Indian Institute of Technology Hyderabad,<br>
+                                Kandi, Sangareddy,<br>
+                                Telangana,<br>
+                                India. 502285.
+                            </span>
+                    </address>
+                </div>
+                <div class="col-lg-3 col-6 mt-4 mt-md-0">
+                    <ul>
+                        <li>Important Links</li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./v&m.html">Vision and Mission</a></li>
+                        <li><a href="./programs.html">Acadmics</a></li>
+                        <li><a href="./events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 mt-4 mt-md-0">
+                    <ul>
+                        <li>Important Links</li>
+                        <li><a href="./research.html">Research</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="social-links">
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="./src/js/main.js"></script>
+</body>
+</html>
