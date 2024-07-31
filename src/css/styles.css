@@ -160,6 +160,291 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 }
 
 
+/* Home Page */
+
+/* carousel */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-inner{
+    position: relative;
+    width:100%;
+    height:100%;
+}
+
+.carousel-caption{
+    position: absolute;
+    text-align: left;
+}
+
+.carousel-caption h5{
+    font-size: 6vw;
+}
+
+.carousel-caption p{
+    color: #f8714c;
+    font-weight: 600;
+}
+
+
+/* Home - News */
+.news-section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0 40px 0;
+}
+
+.events-row {
+    max-height: 280px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.list-group-item {
+    min-width: 240px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.news {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.news-card {
+    width: 100%;
+    height: 280px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.news-card .card-body {
+    padding: 15px;
+}
+
+.news-card .card-footer {
+    display: flex;
+    justify-content: end;
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+}
+
+.news-card-text {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    margin-bottom: 0;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.news-card-text a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.news-card-text a:hover {
+    color: #f8714c;
+}
+
+.news-text-body-secondary {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .lineheading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .lineheading p {
+        margin-bottom: 10px;
+    }
+}
+
+.date {
+    width: 92px;
+    height: 92px;
+    background-color: #fff;
+    color: #f8714c;
+    border-radius: 5px;
+    padding: 15 0px;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+}
+
+.day {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.month,
+.year {
+    font-size: 14px;
+}
+
+.info {
+    flex-grow: 1;
+}
+
+/* Acheivement Section */
+.achievements-section{
+    padding: 40px 0 40px 0;
+    /* background: rgb(248, 113, 76, 0.1); */
+
+    /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%); */
+    /* clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%); */
+    /* background: linear-gradient(160deg, #f8714c, #ffba6c); */
+    /* clip-path: polygon(0 0, 0 0,0 100%, 100% 100%, 100% 50px); */
+}
+.achievements-section .carousel .carousel-inner {
+    padding: 80px 40px;
+    background: rgb(248, 113, 76, 0.1);
+    border-radius: 20px;
+}
+
+.achievements-section .card img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.achievements-section .card-title {
+    color: #f8714c;
+}
+
+.slider-container {
+    position: relative; 
+    width:100%;
+    overflow: hidden;
+}
+.slider-track {
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* animation: scroll 20s linear 1s infinite; */
+}
+.slider-track .card {
+    background: transparent;
+    width: 100%;
+    /* margin: 0 auto; */
+    border: none;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+.slider-track .card-body {
+    max-width: 600px;
+}
+/* .slider-track .card:hover {
+    max-width: 360px;
+}
+.slider-track .card:not(:hover) {
+    max-width: 300px;
+} */
+.slider-track .card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+}  
+.slider-track .card:hover img {
+    transform: scale(1.1);
+}
+.slider-track .card-img-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+.slider-track .text-container{
+    position: absolute;
+    top: auto;
+    bottom: 0px;
+    padding: 20px;
+    left: 0;
+    background: rgb(248, 113, 76, 0.3);
+}
+.slider-track .card-title {
+    color: #f8714c;
+    font-size: 24px;
+    font-weight: bold;
+}
+.slider-track .card-text {
+    font-size: 18px;
+    color: #6c757d;
+}
+/* .slider-track > div {
+    display: flex;
+} */
+/* @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% + 300px));
+        left: 0px;
+    }
+} */
+
+/* Recent actiities */
+.recent-activities { 
+    padding: 40px 0 40px 0;
+    /* background: rgb(248, 113, 76, 0.1); */
+    /* clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%); */
+    /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%); */
+    /* background-image: url('../images/iith.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Gallery item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Image within gallery item */
+.gallery-item img {
+    width: 100%;
+    /* height: 280px; */
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Image hover effect */
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
 
 
 
@@ -770,7 +1055,7 @@ th {
 
 /* Form */
 .form-container {
-    /* display: none; */
+    display: none;
     position: relative;
     width: 100%;
     height: auto;

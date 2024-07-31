@@ -113,27 +113,25 @@
     </nav>
 </header>
 
-<!--Main Container-->
-<div class="main_container">
-    <div class="container p-2">
-        <div class="heading mb-5 mt-5"><span>Students Profiles</span></div>
-        <div class="form-container">
-            <form id="yearForm">
-                <label for="yearSelect">Batch </label>
-                <select id="yearSelect" name="batch" onchange="submitForm()">
-                  <option value="2021">2021</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
-                  <option value="2024">2024</option>
-                  <option value="2025">2025</option>
-                </select>
-              </form>
+     <!--Main Container-->
+     <div class="main_container">
+        <div class="container p-2">
+            <div class="heading mb-5 mt-5"><span>Students Profiles</span></div>
+            <div class="mb-5">
+                <form id="yearForm">
+                    <label for="yearSelect">Batch</label>
+                    <select id="yearSelect" name="year" onchange="submitForm()">
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                    </select>
+                  </form>
+            </div>
+            <div class="row" id="profilesRow"></div>
         </div>
-        <div class="row" id="profilesRow"></div>
     </div>
-</div>
-
-
+      
 <!-- footer -->
 <footer>
     <div class="container">
@@ -200,9 +198,73 @@
     </div>
 </div>
 
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="./src/js/main.js"></script>
-<script src="./src/js/load.js"></script>
+<script src="./js/main.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const loading = document.getElementById('loading');
+        loading.style.display = 'flex';
+
+        let upcoming_year = new URLSearchParams(window.location.search).get('year');
+    
+        if(upcoming_year==null){
+            let date = new Date();
+            upcoming_year = date.getFullYear();
+        }
+        document.getElementById('yearSelect').value = upcoming_year;
+        let FULL_URL = 'https://script.google.com/macros/s/AKfycbz40vgcPN6ZGcUHs6mYkw9sjZn0C5VfCJ8_QDqLVccEK7EzWZ-iJRSOA2OOQABJg7yPhA/exec?joiningyear='+upcoming_year+'';
+
+    fetch(FULL_URL)
+    .then(response => {
+        loading.style.display = 'none';
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(studentsData => {
+        loading.style.display = 'none';
+
+        if (!Array.isArray(studentsData.data)) {
+            throw new Error('Fetched data is not an array');
+        }
+        
+        const profilesRow = document.getElementById('profilesRow');
+        studentsData.data.forEach(student => {
+            profilesRow.innerHTML +=`
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="${student.image}" alt="${student.name}" class="card-img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${student.name}</h5>
+                                <p class="card-text">${student.roll_number}</p>
+                                <p class="card-text">${student.email}</p>
+                                <a href="${student.linkedin}"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `
+        });
+    })
+    .catch(error => {
+        loading.style.display = 'none';
+        console.error('There was a problem with the fetch operation:', error);
+    });
+
+    });
+
+    function submitForm(){
+    document.getElementById('yearForm').submit();
+}
+</script>
 </body>
 </html>

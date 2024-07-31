@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Entrepreneurship and Management | IIT Hyderabad</title>
+    <link rel="shortcut icon" href="./src/img/icons/logosmall.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/styles.css">
+
+    <script src="./src/js/load.js"></script>
+</head>
+<body>
+<!--Header-->
+<header>
+    <nav class="navbar navbar-expand-lg py-2 py-lg-3 shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href=".">
+                <div class="row logo-text-container">
+                    <div class="col p-0">
+                        <img src="./src/img/icons/logo.png" alt="University Logo" class="logo img-fluid">
+                    </div>
+                    <div class="col p-0 text">
+                        <span class="dp-text">Department of Entrepreneurship and Management</span>
+                        <span class="inst-text">Indian Institute of Technology Hyderabad</span>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-light"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html" id="home"><span>Home</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>About Us <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./v&m.html" id="vandm"> <span> Vision and Mission</span></a></li>
+                            <li><a class="dropdown-item" href="./director_message.html" id="director_message"> <span> The Director’s Message</span></a></li>
+                            <li><a class="dropdown-item" href="./hod_message.html" id="hod_message"> <span> The Head’s Message</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Programs <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="dropend">
+                                <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Academic Programs <i class="bi bi-chevron-right ms-3"></i></span></a>
+                                <ul class="dropdown-content dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="./minors_program.html" id="minor_pro"><span> Minor in Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./major_program.html" id="major_pro"><span> Major in Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> MTech in Techno-Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li>
+                            <!-- <li><a class="dropdown-item" href="./dual_degree_program.html" id="dualdegree_pro"><span>PhD</span></a></li> -->
+                                </ul>
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="./minors_program.html" id="minor_pro"><span> Minor in Entrepreneurship</span></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="./major_program.html" id="major_pro"><span> Major in Entrepreneurship</span></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> MTech in Techno-Entrepreneurship</span></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="./dual_degree_program.html" id="dualdegree_pro"><span>PhD</span></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="./cirtifiedCourses_program.html" id="cirtificateCourses_pro"><span> Certificate Cources</span></a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>People <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./faculty.html" id="drop_p"><span>Faculty</span></a></li>
+                            <li class="dropend">
+                                <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Student <i class="bi bi-chevron-right"></i></span></a>
+                                <ul class="dropdown-content dropdown-menu shadow">
+                                    <a class="dropdown-item" href="./m_tech_students.html" id="drop_p"><span>M.Tech</span></a>
+                                    <a class="dropdown-item" href="./phd_students.html" id="drop_p"><span>PHD</span></a>
+                                </ul>
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="./staff.html" id="drop_p"><span>Staff</span></a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./research.html" id="research"><span>Research</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./events.html" id="events"><span>Events</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="./blog_list.html" id="blog"><span>Startups</span></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html" id="contact"><span>Contact</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--Main Container-->
+<div class="main_container">
+    <div class="container-fluid m-0 p-0">
+        <!-- carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="overlay"></div>
+                <img src="./src/img/main_page/img.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block hero-content">
+                    <h5>Empowering Entrepreneurs to Lead with Innovation</h5>
+                    <p>Representative placeholder content.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay"></div>
+                <img src="./src/img/main_page/img.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block hero-content">
+                    <h5>Innovate, Inspire, Ignite</h5>
+                    <p>Leading the Way in Entrepreneurial Excellence</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay"></div>
+                <img src="./src/img/main_page/img.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block hero-content">
+                    <h5>Transforming Visions into Reality</h5>
+                    <p>Explore New Horizons with Us</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+</div>
+
+
+<!-- News and Annocements -->
+<section class="news-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="d-flex justify-content-between">
+                    <p class="heading"><span>Upcoming Events</span></p>
+                    <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+                </div>
+                <div id="UpcomingEvents" class="row events-row"></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-between">
+                    <p class="heading"><span>Announcements</span></p>
+                    <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+                </div>
+                <div class="card news-card">
+                    <div class="card-body">
+                        <marquee id="news" direction="up" scrollamount="2" width="100%" height="240"></marquee>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="achievements-section">
+    <div class="container">
+        <p class="heading"><span>Student Achievements</span></p>
+        <div class="slider-container">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner slider-track" id="Achievements">
+                    <!-- <div class="carousel-item active">
+                        <div class="card">
+                            <div class="row g-0">
+                              <div class="col-lg-6">
+                                <img src="./images/imageach1.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="row g-0">
+                              <div class="col-lg-6">
+                                <img src="./images/imageach1.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>  -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="recentActivities" class="section recent-activities">
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <p class="heading"><span>Recent Activities</span></p>
+            <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+        </div>
+        <!-- <h3 class="section-title heading"><span>Recent Activities</span></h3> -->
+        <div class="gallery" id="Events"></div>
+    </div>
+</section>
+
+
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div class="row px-md-0">
+            <!-- <div class="d-flex">
+                <a class="" href="#">
+                    <img src="./src/img/icons/logo.png" class="img-fluid" alt="Logo">
+                    <sapn class="mx-2 em-txt">Department Of Entrepreneurship and Management</span>
+                </a>
+            </div> -->
+            <div class="row d-flex justify-content-between">
+                <div class="em-txt">
+                    <img src="./src/img/icons/logo.png" class="img-fluid" alt="Logo">
+                    <sapn>Department Of Entrepreneurship and Management</span>
+                </div>
+                <div class="col-lg-4">
+                    <address>
+                        <ul>
+                            <li>
+                                <span class="contact"><i class="bi bi-envelope"></i> office@em.iith.ac.in</span>
+                            </li>
+                        </ul>
+                            <span class="">
+                                Department Of Entrepreneurship and Management,<br>
+                                Indian Institute of Technology Hyderabad,<br>
+                                Kandi, Sangareddy,<br>
+                                Telangana,<br>
+                                India. 502285.
+                            </span>
+                    </address>
+                </div>
+                <div class="col-lg-3 col-6 mt-4 mt-md-0">
+                    <ul>
+                        <li>Important Links</li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./v&m.html">Vision and Mission</a></li>
+                        <li><a href="./programs.html">Acadmics</a></li>
+                        <li><a href="./events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 mt-4 mt-md-0">
+                    <ul>
+                        <li>Important Links</li>
+                        <li><a href="./research.html">Research</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="social-links">
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+    </div>
+</footer>
+
+<!-- loading -->
+<div class="loading-overlay" id="loading">
+    <div>
+        <img src="./src/img/icons/logo.png" alt="University Logo" class="logo img-fluid mx-auto">
+        <p class="h6">Department of Entrepreneurship and Management</p>
+        <p>Indian Institute of Technology Hyderabad</p>
+    </div>
+</div>
+
+<!-- JavaScript to handle pausing and resuming the animation -->
+<!-- <script>
+  const sliderTrack = document.querySelector('.slider-track');
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+      sliderTrack.style.animationPlayState = 'paused';
+    });
+
+    card.addEventListener('mouseleave', () => {
+      sliderTrack.style.animationPlayState = 'running';
+    });
+  });
+</script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const loading = document.getElementById('loading');
+        loading.style.display = 'flex';
+        let FULL_URL = "https://script.google.com/macros/s/AKfycbwdxVt4OsxgZMuSsVmyUO_7OJ1HLrQzW-uUSoPHgpJjnjP9NxFcmJArIwB0qyM05zB4yQ/exec";
+        
+        fetch(FULL_URL)
+        .then(response => {
+            loading.style.display = 'none';
+            console.log(response);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(eventsData => {
+            if (!Array.isArray(eventsData.data)) {
+                throw new Error('Fetched data is not an array');
+            }
+            
+            const currentDate = new Date();
+            const UpcomingEvents = document.getElementById('UpcomingEvents');
+    
+            UpcomingEvents.innerHTML = 'Events are Coming Soon!';
+            if(eventsData.data[0]){
+            eventsData.data[0].forEach(event => {
+                const currentDate = new Date();
+                const eventDate = new Date(event.start_date);
+                const end_eventDate = new Date(event.end_data);
+                
+                if (eventDate > currentDate) {
+                    UpcomingEvents.innerHTML = '';
+                    UpcomingEvents.innerHTML += `
+                    <div class="col-md-6">
+                        <div class="list-group-item list-group-item-action mb-4 rounded">
+                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                <div class="date">
+                                    <div class="month">${eventDate.toDateString().slice(3,8)}</div>
+                                    <div class="day">${eventDate.toDateString().slice(8,10)}</div>
+                                    <div class="year">${eventDate.toDateString().slice(10,)}</div>
+                                </div>
+                                <div class="info">
+                                    <h6 class="mb-1">${event.title}</h6>
+                                    <small class="text-body-secondary">${event.venue}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+            });
+        }else{UpcomingEvents.innerHTML = 'Events are Coming Soon!';}
+
+            const Events = document.getElementById('Events');
+    
+            eventsData.data[1].forEach(event => {
+                Events.innerHTML += `
+                <div class="gallery-item">
+                <img src="${event.image}" alt="${event.image}">
+                <div class="text-overlay">
+                    <div class="text-overlay-content">
+                        <h3>${event.title}</h3>
+                    </div>
+                </div>
+            </div>
+                `;
+            });
+    
+            const News = document.getElementById('news');
+    
+            eventsData.data[2].forEach(news => {
+                News.innerHTML += `
+                <p class="news-card-text">
+                    <a href="${news.link}">${news.title}</a>
+                    <small class="news-text-body-secondary">${news.date}</small>
+                </p>
+                `;
+            });
+
+            const Achievements = document.getElementById('Achievements');
+    
+            eventsData.data[3].forEach(achievement => {
+                Achievements.innerHTML += `
+                <div class="carousel-item active">
+                    <div class="card">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <img src="${achievement.Image}" class="img-fluid rounded-start" alt="${achievement.Image}">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">${achievement.name}</h5>
+                                    <p class="card-text">${achievement.desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+        })
+        .catch(error => {
+            loading.style.display = 'none';
+            console.error('There was a problem with the fetch operation:', error);
+        });
+            });
+    </script>
+         <script>
+            // Function to scroll the list group to the bottom
+            function scrollToBottom() {
+                var listGroup = document.getElementById('listGroup');
+                listGroup.scrollTop = listGroup.scrollHeight;
+            }
+        
+            // Call scrollToBottom function when content is loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                scrollToBottom();
+            });
+        </script> 
+    </body>
+    </html>
