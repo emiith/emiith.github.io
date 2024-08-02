@@ -64,7 +64,14 @@ function renderFaculty(data) {
     data.data.slice(1).forEach(faculty => {
         container.innerHTML += `
             <div class="faculty-profile-card">
-            <img src="${faculty.image}" id="facultyImage" class="img-fluid" onerror="hideImg()"/>
+            <div class="img-container">
+                <img src="${faculty.image}" id="facultyImage" class="faculty-image img-fluid" onerror="hideImg()"/>
+                <div class="text-overlay">
+                    <div class="">
+                        <a class="btn-primary" href="${faculty.profile_link}">View Profile</a>
+                    </div>
+                </div>
+            </div>
             <span class="card-title">
                 <h6>${faculty.name}</h6>
                 <p class="card-text designation">${faculty.designation}</p>

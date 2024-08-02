@@ -580,6 +580,10 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
     transition: opacity 0.3s ease;
 }
 
+.text-overlay a{
+    text-decoration: none;
+}
+
 /* Text overlay content */
 .text-overlay-content {
     text-align: center;
@@ -588,6 +592,7 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 
 /* Show text overlay on hover */
 .gallery-item:hover .text-overlay {
@@ -598,6 +603,10 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
     opacity: 1;
 }
 
+
+.img-container:hover .text-overlay {
+    opacity: 1;
+}
 
 /* events-section */
 
@@ -771,7 +780,28 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-.faculty-profile-card img {
+.faculty-profile-card .img-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
+.faculty-profile-card .img-container .text-overlay-content {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.faculty-profile-card .text-overlay-content .btn-primary {
+    padding: 10px;
+    color: #f8714c;
+    background: transparent;
+    border: 2px solid #f8714c;
+    border-radius: 20px;
+}
+
+.faculty-profile-card .img-container img {
     width: 100%;
     height: 280px;
     object-fit: cover;
@@ -1073,7 +1103,10 @@ th {
     padding: 10px;
   }
 
-
+.msg {
+    text-align: justify;
+    text-justify: inter-word;
+}
 /* Buttons */
 .btn-short {
     background-color: #f8714c;
