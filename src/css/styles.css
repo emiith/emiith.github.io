@@ -1111,6 +1111,12 @@ th {
 }
 
 /* loading overlay */
+.spinner-grow {
+    color: #f8714c;
+}
+.spinner-border {
+    color: #f8714c;
+}
 .loading-overlay{
     position: fixed;
   display: none;
