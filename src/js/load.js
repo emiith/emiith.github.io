@@ -16,7 +16,6 @@ async function fetchData(url) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         let data = await response.json();
-        console.log(data.data);
         return data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -164,7 +163,6 @@ function renderEvents(data) {
 
     upcomingEvents.innerHTML = '';
     latestEvents.innerHTML = '';
-    console.log(data);
     data.data.forEach(event => {
 
         const currentDate = new Date();
@@ -175,7 +173,6 @@ function renderEvents(data) {
         const upcomingEvents = document.getElementById('upcomingEvents');
 
         if (currentYear!=year){
-            console.log('yes');
             document.getElementById('upev').style.display = 'none';
         }
 
@@ -183,7 +180,7 @@ function renderEvents(data) {
             upcomingEvents.innerHTML += `
             <div class="col">
                 <div class="gallery-item event-gallery-item event-card">
-                    <img src="${event.image}" alt="Image 2">
+                    <img src="${event.image}" alt="Image 2" onerror="hideImg()" id="HideImg">
                     <div class="text-box card-body">
                         <h5>${event.title}</h5>
                         <p class="event-date">${eventDate.toDateString()!='Invalid Date'?eventDate.toDateString().slice(3,):'----'}</p>
@@ -204,7 +201,7 @@ function renderEvents(data) {
                                 <h5 class="modal-title" id="eventModalLabel${event.id}">${event.title}</h5>
                             </div>
                             <div class="modal-body">
-                                <img src="${event.image}" class="img-fluid mb-3"/>
+                                <img src="${event.image}" class="img-fluid mb-3" onerror="hideImg()" id="HideImg"/>
                                 <p class="card-text event_date">${eventDate.toDateString()!='Invalid Date'?eventDate.toDateString().slice(3,):'----'}</p>
                                 <p class="card-text">${event.venue}</p>
                                 <p>${event.description}</p>

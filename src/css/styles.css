@@ -434,7 +434,7 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 /* Image within gallery item */
 .gallery-item img {
     width: 100%;
-    /* height: 280px; */
+    height: 180px;
     display: block;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -769,7 +769,7 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 .faculty-profile-card {
     position: relative;
     background: #fff;
-    max-width: 340px;
+    max-width: 320px;
     height: 100%;
     margin: 10px;
     text-align: center;
@@ -783,7 +783,8 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 .faculty-profile-card .img-container {
     position: relative;
     width: 100%;
-    height: 280px;
+    height: 320px;
+    overflow: hidden;
 }
 .faculty-profile-card .img-container .text-overlay-content {
     text-align: center;
@@ -803,7 +804,7 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 
 .faculty-profile-card .img-container img {
     width: 100%;
-    height: 280px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -828,7 +829,7 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 
 .faculty-profile-card .card-body {
     padding: 20px;
-    padding-top: 160px;
+    padding-top: 80px;
 }
 
 .designation{

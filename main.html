@@ -199,38 +199,7 @@
         <p class="heading"><span>Student Achievements</span></p>
         <div class="slider-container">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner slider-track" id="Achievements">
-                    <!-- <div class="carousel-item active">
-                        <div class="card">
-                            <div class="row g-0">
-                              <div class="col-lg-6">
-                                <img src="./images/imageach1.png" class="img-fluid rounded-start" alt="...">
-                              </div>
-                              <div class="col-lg-6">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="carousel-item active">
-                        <div class="card">
-                            <div class="row g-0">
-                              <div class="col-lg-6">
-                                <img src="./images/imageach1.png" class="img-fluid rounded-start" alt="...">
-                              </div>
-                              <div class="col-lg-6">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>  -->
-                </div>
+                <div class="carousel-inner slider-track" id="Achievements"></div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -354,14 +323,13 @@
             
             const currentDate = new Date();
             const UpcomingEvents = document.getElementById('UpcomingEvents');
-    
+
             UpcomingEvents.innerHTML = 'Events are Coming Soon!';
             if(eventsData.data[0]){
             eventsData.data[0].forEach(event => {
-                const currentDate = new Date();
                 const eventDate = new Date(event.start_date);
                 const end_eventDate = new Date(event.end_data);
-                
+
                 if (eventDate > currentDate) {
                     UpcomingEvents.innerHTML = '';
                     UpcomingEvents.innerHTML += `
@@ -387,16 +355,21 @@
             const Events = document.getElementById('Events');
     
             eventsData.data[1].forEach(event => {
+                const eventDate = new Date(event.start_date);
+                const end_eventDate = new Date(event.end_data);
+                if (eventDate < currentDate) {
                 Events.innerHTML += `
                 <div class="gallery-item">
                 <img src="${event.image}" alt="${event.image}">
                 <div class="text-overlay">
                     <div class="text-overlay-content">
-                        <h3>${event.title}</h3>
+                        <h5>${event.title}</h5><br/>
+                        <a href="./events.html" class="btn-primary">View More</a>
                     </div>
                 </div>
             </div>
                 `;
+        }
             });
     
             const News = document.getElementById('news');
@@ -414,7 +387,7 @@
     
             eventsData.data[3].forEach(achievement => {
                 Achievements.innerHTML += `
-                <div class="carousel-item active">
+                <div class="carousel-item achievement-item">
                     <div class="card">
                         <div class="row g-0">
                             <div class="col-lg-6">
@@ -431,6 +404,10 @@
                 </div>
                 `;
             });
+            const firstChild = document.querySelector('.achievement-item');
+            if (firstChild) {
+                firstChild.classList.add('active');
+            }
         })
         .catch(error => {
             loading.style.display = 'none';
