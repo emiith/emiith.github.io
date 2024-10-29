@@ -972,6 +972,12 @@ footer .powered-by img {
     width: 65px; 
 }
 
+iframe {
+    width: 100% !important;
+    border: none;
+    display: block;
+}
+
 .social-links{
     display: flex;
     justify-content: center;
