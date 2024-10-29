@@ -115,12 +115,10 @@
 
 <!--Main Container-->
 <div class="container">
-    <div class="col-lg-8 mx-auto">
-        <p class="heading mt-5"><span>PhD Program</span></p>
-        <div class="program-details">
-            <div class="embed-responsive embed-responsive-21by9">
-                <iframe height="2400px" scrolling="no" src="https://docs.google.com/document/d/e/2PACX-1vTsE0fEZ1WbnPLbm7XXQkUr6YP0v-brCVo7WXHBPI-0A9XEHWq8sgU9qbnVENF7oA/pub?embedded=true" allowfullscreen></iframe>  
-              </div>
+    <p class="heading mt-5"><span>PhD Program</span></p>
+    <div class="iframe-container">
+        <div class="embed-responsive embed-responsive-21by9">
+            <iframe class="embed-responsive-item" width="100%" height="900px" src="https://docs.google.com/document/d/e/2PACX-1vQ7padHTPBvM5Hvydbywhm1njK8HegTJKnyTperlrmYViw882JZgpTQDE9B4suqOqXOm59ri5qhhtkw/pub?embedded=true" allowfullscreen></iframe>
         </div>
 </div>
 </div>
@@ -184,5 +182,13 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="./src/js/main.js"></script>
+<script>
+    function adjustIframeHeight() {
+        const iframe = document.getElementById('dynamicIframe');
+        if (iframe.contentDocument) {
+            iframe.style.height = iframe.contentDocument.documentElement.scrollHeight + 'px';
+        }
+    }
+</script>
 </body>
 </html>

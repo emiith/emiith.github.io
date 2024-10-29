@@ -972,11 +972,24 @@ footer .powered-by img {
     width: 65px; 
 }
 
-iframe {
-    width: 100% !important;
-    border: none;
-    display: block;
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* padding-top: 80.25%; */
+    overflow: hidden;
+    text-align: center;
 }
+
+/* iframe {
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+} */
+
+
 
 .social-links{
     display: flex;
