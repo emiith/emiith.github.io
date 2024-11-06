@@ -242,7 +242,8 @@ function renderEvents(data) {
                             <div class="modal-body">
                                 <img src="${event.image}" class="img-fluid mb-3"/>
                                 <p class="card-text event_date">${eventDate.toDateString()!='Invalid Date'?eventDate.toDateString().slice(3,):'----'}</p>
-                                <p class="card-text">${event.venue}</p>
+                                <p class="card-text">${event.speaker?'Speaker: '+event.speaker:''} ${event.speaker_organization?', ('+event.speaker_organization+')':''}</p>
+                                <p class="card-text">${event.venue?'Venue: '+event.venue:''}</p>
                                 <p>${event.description}</p>
                             </div>
                             <div class="modal-footer">
