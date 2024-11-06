@@ -45,36 +45,47 @@
                         <a class="nav-link" href="./index.html" id="home"><span>Home</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span>About Us <i class="bi bi-chevron-down"></i></span> 
                         </a>
                         <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="./v&m.html" id="vandm"> <span> Vision and Mission</span></a></li>
-                            <li><a class="dropdown-item" href="./director_message.html" id="director_message"> <span> The Director’s Message</span></a></li>
+                            <li><a class="dropdown-item active" href="./director_message.html" id="director_message"> <span> The Director’s Message</span></a></li>
                             <li><a class="dropdown-item" href="./hod_message.html" id="hod_message"> <span> The Head’s Message</span></a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span>Programs <i class="bi bi-chevron-down"></i></span> 
+                            <span>Academics <i class="bi bi-chevron-down"></i></span> 
                         </a>
                         <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
                             <li class="dropend">
+                                <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Programs <i class="bi bi-chevron-right ms-3"></i></span></a>
+                                <ul class="dropdown-content dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="./minors_program.html" id="minor_pro"><span> Minor in Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./major_program.html" id="major_pro"><span> Major in Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> MTech in Techno-Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Admissions <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <!-- <li class="dropend">
                                 <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Academic Programs <i class="bi bi-chevron-right ms-3"></i></span></a>
                                 <ul class="dropdown-content dropdown-menu shadow">
                                     <li><a class="dropdown-item" href="./minors_program.html" id="minor_pro"><span> Minor in Entrepreneurship</span></a></li>
                                     <li><a class="dropdown-item" href="./major_program.html" id="major_pro"><span> Major in Entrepreneurship</span></a></li>
                                     <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> MTech in Techno-Entrepreneurship</span></a></li>
                                     <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li>
-                            <!-- <li><a class="dropdown-item" href="./dual_degree_program.html" id="dualdegree_pro"><span>PhD</span></a></li> -->
                                 </ul>
-                            </li>
-                            <!-- <li><a class="dropdown-item" href="./minors_program.html" id="minor_pro"><span> Minor in Entrepreneurship</span></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="./major_program.html" id="major_pro"><span> Major in Entrepreneurship</span></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> MTech in Techno-Entrepreneurship</span></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="./dual_degree_program.html" id="dualdegree_pro"><span>PhD</span></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="./cirtifiedCourses_program.html" id="cirtificateCourses_pro"><span> Certificate Cources</span></a></li> -->
+                            </li> -->
+                            <li><a class="dropdown-item" href="./phd_admission.html" id="phd_pro"><span> PhD</span></a></li>
+
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -87,7 +98,7 @@
                                 <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Student <i class="bi bi-chevron-right"></i></span></a>
                                 <ul class="dropdown-content dropdown-menu shadow">
                                     <a class="dropdown-item" href="./m_tech_students.html" id="drop_p"><span>M.Tech</span></a>
-                                    <a class="dropdown-item" href="./phd_students.html" id="drop_p"><span>PHD</span></a>
+                                    <a class="dropdown-item" href="./phd_students.html" id="drop_p"><span>PhD</span></a>
                                 </ul>
                             </li>
                             <!-- <li><a class="dropdown-item" href="./staff.html" id="drop_p"><span>Staff</span></a></li> -->
@@ -143,44 +154,47 @@
                     <img src="./src/img/icons/logo.png" class="img-fluid" alt="Logo">
                     <sapn>Department of Entrepreneurship and Management</span>
                 </div>
-                <div class="col-lg-4">
-                    <address>
-                        <ul>
-                            <li>
-                                <span class="contact"><i class="bi bi-envelope"></i> office@em.iith.ac.in</span>
-                            </li>
-                        </ul>
-                            <span class="">
+                <div class="col-lg-4 col-6 mt-4 mt-md-0">
+                    <ul>
+                        <li><span class="contact"><i class="bi bi-envelope"></i> office@em.iith.ac.in</span></li>
+                        <li>
+                            <address>
                                 Department of Entrepreneurship and Management,<br>
                                 Indian Institute of Technology Hyderabad,<br>
                                 Kandi, Sangareddy,<br>
                                 Telangana,<br>
                                 India. 502285.
-                            </span>
-                    </address>
+                            </address>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-3 col-6 mt-4 mt-md-0">
                     <ul>
                         <li>Important Links</li>
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./v&m.html">Vision and Mission</a></li>
-                        <li><a href="./events.html">Events</a></li>
+                        <li><a href="./faculty.html">Faculty Members</a></li>
+                        <li><a href="./research.html">Research</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-6 mt-4 mt-md-0">
                     <ul>
                         <li>Important Links</li>
-                        <li><a href="./research.html">Research</a></li>
+                        <li><a href="./events.html">Events</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="social-links">
-        <a href="https://in.linkedin.com/company/department-of-entrepreneurship-and-management-iit-hyderabad"><i class="bi bi-linkedin"></i></a>
-        <a href="#"><i class="bi bi-youtube"></i></a>
-        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <hr/>
+        <div class="d-flex justify-content-between">
+            <p class="text-nowrap cpright">@ Department of Entrepreneurship and Management, IIT Hyderabad. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://in.linkedin.com/company/department-of-entrepreneurship-and-management-iit-hyderabad"><i class="bi bi-linkedin"></i></a>
+                <!-- <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a> -->
+            </div>
+        </div>
     </div>
 </footer>
 

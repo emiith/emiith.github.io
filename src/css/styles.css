@@ -41,7 +41,7 @@ header .navbar-toggler:hover .navbar-toggler-icon {
 
 header .navbar-nav .nav-item .nav-link {
     color: #1e2d41;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 0.5rem;
     font-size: 16px;
     font-weight: 400 !important;
 }
@@ -79,9 +79,9 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 }
 
 .dropdown-item.active, .dropdown-item:active {
-    color: #ffffff;
+    /* color: #ffffff; */
     text-decoration: none;
-    background-color: #f8714c;
+    color: #f8714c;
 }
 
 /* Logo */
@@ -890,6 +890,7 @@ footer {
     border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
     color: #999;
     margin-bottom: 0px;
+    font-size: 14px;
     background-color: #171e27;
     padding: 40px 0 0 0;
     overflow-wrap: break-word;
@@ -913,6 +914,7 @@ footer address {
     color: #bfbfbf;
     font-size: 14px;
     line-height: 1.5;
+    padding: 10px 0;
 }
 
 footer address .contact {
@@ -923,12 +925,12 @@ footer address .contact {
     font-size: 18px;
     font-weight: 600;
     color: #bfbfbf;
-    margin: 40px 0 20px 0;
+    margin: 20px 0 20px 0;
 }
 
-footer address .contact i {
+footer .contact i {
     color: #f8714c;
-    margin-right: 10px;
+    margin-right: 2px;
 }
 
 footer ul {
@@ -972,24 +974,9 @@ footer .powered-by img {
     width: 65px; 
 }
 
-.iframe-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    /* padding-top: 80.25%; */
-    overflow: hidden;
-    text-align: center;
+footer .cpright{
+    padding: 20px 0;
 }
-
-/* iframe {
-    width: 100%;
-    min-height: 100vh;
-    overflow: auto;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;
-} */
-
-
 
 .social-links{
     display: flex;
@@ -1017,9 +1004,9 @@ footer .powered-by img {
 }
 
 .social-links a:hover{
-    color: #f8714c;
-    border: 1px solid #ffffff;
-    border-radius: 50%;
+    /* color: #f8714c; */
+    border: 1px solid #f8714c;
+    /* border-radius: 50%; */
 } 
 
  
@@ -1027,6 +1014,19 @@ footer .powered-by img {
 
 
 /* Common */
+/* .iframe-section{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.iframe-container iframe{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    text-align: center;
+} */
 
 table {
     width: 100%;
