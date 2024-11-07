@@ -1,1117 +1,445 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<title>Department of Entrepreneurship and Management | IIT Hyderabad </title>
-	<!-- Favicon -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="shortcut icon" type="image/png" href="src/img/icons/logosmall.png" />
-	<link rel="stylesheet" type="text/css" href="src/css/Index_style.css">
-	<script src="https://kit.fontawesome.com/3f68a81179.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Entrepreneurship and Management | IIT Hyderabad</title>
+    <link rel="shortcut icon" href="./src/img/icons/logosmall.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/styles.css">
+
+    <script src="./src/js/load.js"></script>
 </head>
-
 <body>
-	<div id="header">
-		<a href="https://www.iith.ac.in/" target="_blank"><img id="maincenter"
-				src="src/img/main_page/main_center.png"></a>
-		<h1 style="text-shadow: -1.5px -1.5px 0 #FFF, 1.5px -1.5px 0 #FFF, -1.5px 1.5px 0 #FFF, 1.5px 1.5px 0 #FFF;"
-			id="head"> Department of Entrepreneurship and Management</h1>
-	</div>
-	<div class="navbar">
-		<a href="#">About Us</a>
-		<a href="#Academic Programs">Academic Programs</a>
-		<a href="#Activities">Activities</a>
-		<a href="#Admissions">Admissions</a>
-		<a href="#Faculty">People</a>
-		<a href="#Funded Projects">Funded Projects</a>
-		<a href="#studentAchievements">Student Achievements</a>
-		<a href="#contactus">Contact Us</a>
-	</div>
-	<!--------------------------------------->
-	<div>
-		<a style="font-size: 18px" href="https://faculty.recruitment.iith.ac.in/">
-			<marquee scrollamount="8" direction="left" id="announcement">Faculty Recruitment</marquee>
-			</a>
-		<a style="font-size: 18px" href="src/doc/Announcement of Result through Department Website_July 2024.pdf">
-			</a>
-			<p style="color: red" id="break"><br></p>
-	</div>
+<!--Header-->
+<header>
+    <nav class="navbar navbar-expand-lg py-2 py-lg-3 shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href=".">
+                <div class="row logo-text-container">
+                    <div class="col p-0">
+                        <img src="./src/img/icons/logo.png" alt="University Logo" class="logo img-fluid">
+                    </div>
+                    <div class="col p-0 text">
+                        <span class="dp-text">Department of Entrepreneurship and Management</span>
+                        <span class="inst-text">Indian Institute of Technology Hyderabad</span>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-light"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./index.html" id="home"><span>Home</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>About Us <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./v&m.html" id="vandm"> <span> Vision and Mission</span></a></li>
+                            <li><a class="dropdown-item" href="./director_message.html" id="director_message"> <span> The Director’s Message</span></a></li>
+                            <li><a class="dropdown-item" href="./hod_message.html" id="hod_message"> <span> The Head’s Message</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Academics <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="dropend">
+                                <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Programs <i class="bi bi-chevron-right ms-3"></i></span></a>
+                                <ul class="dropdown-content dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="./minors_program.html" id="minor_pro"><span> Minor in Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./major_program.html" id="major_pro"><span> Major in Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> MTech in Techno-Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Admissions <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <!-- <li class="dropend">
+                                <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Academic Programs <i class="bi bi-chevron-right ms-3"></i></span></a>
+                                <ul class="dropdown-content dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="./minors_program.html" id="minor_pro"><span> Minor in Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./major_program.html" id="major_pro"><span> Major in Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> MTech in Techno-Entrepreneurship</span></a></li>
+                                    <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li>
+                                </ul>
+                            </li> -->
+                            <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li>
 
-	<!-------------------------------------->
-	<div>
-		<div style="" id="vision">
-			<h1 style="color:red; text-align: center; ">Vision</h1>
-			<p style="color:black;text-align: center;width: 80% ;margin: auto;font-size: 20px "> To become a department
-				of international repute in the area of entrepreneurial education, training and research.</p>
-		</div>
-		<p style="margin-bottom:20px;width:40%" id="break"><br></p>
-		<div style="" id="mission">
-			<h1 style="color:red; text-align: center; ">Aim, Focus and Scope of the Department</h1>
-			<p style="color:black;text-align: center;width: 80%; margin: auto; font-size: 20px "> To nurture
-				entrepreneurial motivation and skills among young graduates and to produce high quality research in the
-				areas of entrepreneurship and management.</p>
-		</div>
-		<br>
-		<p style="color: red" id="break"><br></p>
-		<br>
-		<h1 style="color:red;text-align: center;">The Director’s Message</h1>
-		<div style="width:90%;margin:auto;" id="directorMessage">
-			<div style="width:70%;float: left;">
-				<p
-					style="min-height: 200px;font-size: 20px;padding-right:20px;border-right: 2px solid red;float: top;margin-top:1em;margin-right:1em ">
-					Indian Institute of Technology Hyderabad, with its fast-paced growth in quality research and
-					teaching has emerged as one of the top 10 engineering institutes in India in the QS-2021 World
-					Rankings. By prioritizing highly futuristic and novel areas like climate change and AI, IITH has the
-					early movers’ advantage of becoming a trendsetter in various other areas as well. We are also in an
-					advantageous position of becoming a pedestal of interdisciplinary research and teaching by
-					synergizing the strengths of our faculty in science, engineering, liberal arts and design. With the
-					prime focus on entrepreneurship and management, I strongly believe that this department has great
-					potential to nurture young entrepreneurs who can contribute to the economic and social development
-					of the country.<br>
-					<l style="float: right;">~ Prof. B. S. Murty</l>
-				</p>
-			</div>
-			<div style="width:30%;float:right;float:top;">
-				<img style="max-height:240px;padding: 0;border: 2px;float: right;border-style: solid;border-color: black;"
-					src="src/img/main_page/Director.jpg">
-			</div>
-		</div>
-		<p id="break"><br></p>
-		<br>
-		<h1 style="color:red;text-align: center;">The Head’s Message</h1>
-		<div style="width:90%;margin:auto;display: flex;justify-content: space-between;" id="hodMessage">
-			<div style="">
-				<img id="hodImg" style="padding: 0;border: 1.5px;border-style: solid;border-color: black; max-height:240px;"
-					src="src/img/main_page/hod.jpg">
-			</div>
-			<div style="margin-left: 30px;">
-				<p
-					style="min-height: 200px;font-size: 20px;padding-left:20px;border-left: 2px solid red;margin-top:1em;">
-					The Department of Entrepreneurship and Management was established in 2021 as part of IIT Hyderabad
-					that takes pride in promoting innovation and interdisciplinarity. The department has tremendous
-					potential to become a pioneer in entrepreneurship education and research. The academic programmes
-					pursued by the department are predominantly focussed on nurturing entrepreneurship and moving from
-					the paradigm of job seekers to that of job creators. The department also takes keen interest in
-					'Management' contextualized for 'New Age Organizations' in both research and teaching. The
-					department welcomes students, researchers and industry experts to partner with us in different roles
-					in our pursuit. <br>
-					<l style="float: right;">~ Dr. Nakul Parameswar</l>
-				</p>
-			</div>
-		</div>
-		<br>
-		<!----------------------------------------------------->
-		<div style="" id="Academic Programs">
-			<p style="clear: both"></p>
-			<p style="color:red" id="break"><br></p>
-			<br>
-			<h1 style="color:red;text-align: center;">Academic Programs</h1>
-			<br>
-			<div style="width:75%;margin: auto">
-				<p style="color:red;font-size: 18px;width:95%;margin:auto;font-weight: bold">Minor in Entrepreneurship
-				</p><br>
-				<p style="width:90%;font-size: 18px;margin:auto;margin-top: 0px;">B.Tech students who are in their 5th
-					Semester are eligible to register for the Minor in Entrepreneurship. To fulfill the minor, students
-					have to undergo 12 credits of course work. Courses will cover concepts related to entrepreneurship
-					and Management.
-				</p><br>
-				<p style="color:red;font-size: 18px;width:95%;margin:auto;font-weight: bold"><a href="./Minor curriculum.pdf" target="_blank">See curriculum</a></p>				
-				<br></p>
-			</div>
-			<div style="width:75%;margin: auto">
-				<p style="color:red;font-size: 18px;width:95%;margin:auto;font-weight: bold">Major in Entrepreneurship (Upcoming-2024)
-				</p><br>
-				<p style="width:90%;font-size: 18px;margin:auto;margin-top: 0px;">B.Tech students who are in their 5th
-					Semester are eligible to register for the Major in Entrepreneurship. To fulfill the major, students
-					have to undergo 24 credits of course work.
-				</p><br>
-				</p>
-			</div>
-			<div style="width:75%;margin: auto">
-				<p style="color:red;font-size: 18px;width:95%;margin:auto;font-weight: bold">MTech in Techno-Entrepreneurship.<br>
-	                         <a href="https://drive.google.com/file/d/10dur_DSEBKZiG2PpwVDEUTzGVrMIKdwC/view?usp=drive_link"" target="_blank">See curriculum</a>
-				</p><br>
-			</div>
-			<div style="width:75%;margin: auto">
-				<p style="color:red;font-size: 18px;width:95%;margin:auto;font-weight: bold">PhD 
-				</p><br>
-				</p> 
-			</div>
-			<!----------------------------------------------------->
-			<div id="Activities">
-					<p style="clear: both"><br></p>
-					<p style="color:red" id="break"><br></p>
-					<br>
-					<h1 style="color:red;text-align: center;">Activities</h1>
-					<br>
-					<div style="width:75%;margin: auto">
-						<p style="color:red;font-size: 18px;width:95%;margin:auto;font-weight: bold">Snapshots from
-							Entrepreneurship Talk Series</p><br>
-						<div class="w3-content" style="width: 90%; min-height: 425px;">
-							<img class="mySlides" src="src/img/webinar/4.png" style="width:100%">
-							<img class="mySlides" src="src/img/webinar/3.png" style="width:100%">
-							<img class="mySlides" src="src/img/webinar/2.png" style="width:100%">
-							<img class="mySlides" src="src/img/webinar/1_2.png" style="width:100%">
-							<img class="mySlides" src="src/img/webinar/1_1.png" style="width:100%">
-						</div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>People <i class="bi bi-chevron-down"></i></span> 
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./faculty.html" id="drop_p"><span>Faculty</span></a></li>
+                            <li class="dropend">
+                                <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Student <i class="bi bi-chevron-right"></i></span></a>
+                                <ul class="dropdown-content dropdown-menu shadow">
+                                    <a class="dropdown-item" href="./m_tech_students.html" id="drop_p"><span>M.Tech</span></a>
+                                    <a class="dropdown-item" href="./phd_students.html" id="drop_p"><span>PhD</span></a>
+                                </ul>
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="./staff.html" id="drop_p"><span>Staff</span></a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./research.html" id="research"><span>Research</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./events.html" id="events"><span>Events</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="./blog_list.html" id="blog"><span>Startups</span></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html" id="contact"><span>Contact</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
-						<div class="w3-center">
-							<div class="w3-section">
-								<button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
-								<button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
-							</div>
-							<button class="w3-button demo" onclick="currentDiv(1)">1</button>
-							<button class="w3-button demo" onclick="currentDiv(2)">2</button>
-							<button class="w3-button demo" onclick="currentDiv(3)">3</button>
-							<button class="w3-button demo" onclick="currentDiv(4)">4</button>
-							<button class="w3-button demo" onclick="currentDiv(5)">5</button>
-						</div>
+<!--Main Container-->
+<div class="main_container">
+    <div class="container-fluid m-0 p-0">
+        <!-- carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="overlay"></div>
+                <img src="./src/img/main_page/img1.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block hero-content">
+                    <h5>Empowering Entrepreneurs to Lead with Innovation</h5>
+                    <p>Management for entrepreneurship.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay"></div>
+                <img src="./src/img/main_page/img2.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block hero-content">
+                    <h5>Innovate, Inspire, Ignite</h5>
+                    <p>Leading the Way in Entrepreneurship Education</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay"></div>
+                <img src="./src/img/main_page/img3.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block hero-content">
+                    <h5>Transforming Visions into Reality</h5>
+                    <p>Learn to Explore New Horizons</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+</div>
 
 
-						<p style="width:90%;font-size: 18px;margin:auto;margin-top: 0px;"><a
-								href="https://drive.google.com/drive/folders/1CV86DQRR4ZMNid6U8YWMLyRb6k3V6FVT?usp=sharing"
-								target="_blank">Watch the series</a></p>
-					</div>
-					<br>
-					<h1 style="color:red;text-align: center;">Workshops/ Certificate Courses/Events</h1>
-					<div style="width:75%;margin: auto">
-						<ul>
-							<li><p style="width:90%;font-size: 18px;margin-left: 16px;">
-								4-Day program on Deeptech Entrepreneurship on July 22-25 offered jointly by the Department of Entrepreneurship and Management and BVR SCIENT. This will be of great interest to students and budding entrepreneurs associated with technology and innovation. <a style="text-decoration: none;" href="https://drive.google.com/file/d/1j2kAo_MmLkUFrw_0S4-qVrxrJGfocUpn/view" target="_blank">Read More</a> (<a href="https://payments.billdesk.com/bdcollect/bd/iitof/13496">Register Here</a>)
-							</p>
-						</li>
-        					<li><p style="width:90%;font-size: 18px;margin-left: 16px;">
-								Workshop on “VC Funding Opportunity for Early Stage Entrepreneurs” Organized by Department of Entrepreneurship and Management, IIT Hyderabad on 26th August 2023 and 2nd September 2023.
-							</p>
-						</li>
-       					       <li><p style="width:90%;font-size: 18px;margin-top: 10px;margin-left: 16px;">
-								The Department of Entrepreneurship and Management under the Aegis of Institute Innovation Council organized an Event on "Innovate & Inspire by T-AIM (Telangana AI Mission): From Ideation to Implementation" to Commemorate World Entrepreneurs' Day, on 16th August 2023. 
-							</p>
-					       </li>
-                                               <li><p style="width:90%;font-size: 18px;margin-left: 16px;">
-								"Embracing ESG through Responsible Leadership" - A Residential Training Program for Senior Leadership of Indian Oil Corporation from 10th July to 13th July 2023 by Department of Entrepreneurship and Management, IIT Hyderabad. 
-							</p>
-					       </li>
-					       <li><p style="width:90%;font-size: 18px;margin-top: 10px;margin-left: 16px;">
-								Workshop on Business Model Canvas Facilitated by Mr. Vamshi Koka, Organized by Department of Entrepreneurship and Management, IIT Hyderabad on 16th April 2023. 
-							</p>
-					         </li>
-						<li><p style="width:90%;font-size: 18px;margin-left: 16px;">
-								Online Symposium on 'Deeptech Entrepreneurship: Opportunities and Gaps', on 16th March 2022 Organized by Department of Entrepreneurship and Management, IIT Hyderabad. 
-							</p>
-						</li>
-						 <li><p style="width:90%;font-size: 18px;margin-top: 10px;margin-left: 16px;">
-								Executive Development Program on Business Model Innovation for Business Leaders, Entrepreneurs and Intrapreneurs Organized by Department of Entrepreneurship and Management in Collaboration with Business Design Labs from 4th June to 30th July 2021. 
-							</p>
-						 </li>
-						<li><p style="width:90%;font-size: 18px;margin-left: 16px;">
-								Certificate Course on the Theme of "Deeptech Entrepreneurship" Organized by iTIC and Department of Entrepreneurship and Management, IIT Hyderabad from 21st to 25th February 2022. 
-							</p>
-						</li>
-					        <li><p style="width:90%;font-size: 18px;margin-top: 10px;margin-left: 16px;">
-								Workshop on Project Management for Entrepreneurship on 24 September 2022 Facilitated by Dr Smiju Sudevan at the Department of Entrepreneurship and Management, IIT Hyderabad.
-							</p>
-						</li>
-					        <li><p style="width:90%;font-size: 18px;margin-top: 10px;margin-left: 16px;">
-								Women Leadership Workshop Organized by Department of Entrepreneurship and Management IIT Hyderabad from 2nd July to 31st July 2022.
-							</p>
-						</li
-                                               </ul>
-					</div>
-					<br>
-					<div id="Faculty_Recruitment"></div>
-					<div style="width:75%;margin: auto">
-						<p style="color:red;font-size: 18px;width:95%;margin:auto;font-weight: bold">Faculty Recruitment
-						</p><br>
-						<p style="width:90%;font-size: 18px;margin:auto;margin-top: 0px;">We are looking for energetic
-							young scholars in the areas like Entrepreneurship, Innovation Management, Marketing
-							Management, Financial management, Business Policy, Strategic Management, Rural Management,
-							and Information Systems at assistant professor level. If you are interested please apply
-							through the <a href="https://faculty.recruitment.iith.ac.in/"
-								target="_blank">link</a>.<br><br>You can also contact <a
-								href="mailto:head@em.iith.ac.in" target="_blank">head@em.iith.ac.in</a>.
-						</p>
-					</div>
-				</div>
-				<!----------------------------------------------------->
-				<div style="" id="Admissions">
-					<p style="clear: both"><br></p>
-					<p style="color:red" id="break"><br></p>
-					<br>
-					<h1 style="color:red;text-align: center;">Admissions</h1>
-					<br>
-					<div style="width:75%;margin: auto">
-						<p style="color:red;font-size: 18px;width:95%;margin:auto;font-weight: bold">PhD Admissions</p>
-						<br>
-						<p style="width:90%;font-size: 18px;margin:auto;margin-top: 0px;">Candidates who are interested
-							to apply for PhD in Entrepreneurship and Management related areas can go through the
-							announcement and application process using the following <a
-								href="https://www.iith.ac.in/phdadmissions/" target="_blank">link</a>.
-						</p>
-					</div>
-				</div>
-				<p style="clear: both"><br></p>
-				<p style="color:red" id="break"><br></p>
-				<!----------------------------------------------------->
-				<br>
-				<div id="Faculty"></div>
-				<div style="width:auto;text-align: center;">
-					<img style="max-height:360px ;padding: 0;border: 1.5px;border-style: solid;border-color: black;"
-						src="src/img/misc/group.jpeg">
-				</div>
-				<p style="clear: both"><br></p>
-				<p style="color:red" id="break"><br></p>
-				<h1 style="color:red;text-align: center;">Faculty</h1>
-				<div style="width:70%;margin:auto;">
-					<br>
-					<div style="width:30%;float:left;float:top;">
-						<img style="max-height:240px ;padding: 0;border: 1.5px;border-style: solid;border-color: black;"
-							src="src/img/faculty/mpg_photo.jpg">
-					</div>
-					<div style="width:70%;float: right;">
-						<p
-							style="min-height: 200px;font-size: 18px;padding-left:20px;border-left: 2px solid red;float: top;margin-top:1em;">
-							Dr. M.P.Ganesh<br>Affiliated Faculty<br>Associate Professor<br>Department of Liberal Arts<br><img style="height:18px;"
-								src="src/img/icons/mail.png"> : <a href="mailto:mpganesh@em.iith.ac.in"
-								target="_blank">mpganesh@em.iith.ac.in</a><br><br><a
-								href="https://drive.google.com/file/d/11Zc8PXnWDHUqwL8ZIag57rgL1UXfYnyR/view?usp=sharing"
-								target="_blank">Profile details</a>
-						</p>
-					</div>
-					<p style="margin-bottom:20px;width:40%" id="break"><br></p>
-					<div style="width:30%;float:left;float:top;">
-						<img style="height:240px ;padding: 0;border: 1.5px;border-style: solid;border-color: black;"
-							src="src/img/faculty/Nakul.jpg">
-					</div>
-					<div style="width:70%;float: right;">
-						<p
-							style="min-height: 200px;font-size: 18px;padding-left:20px;border-left: 2px solid red;float: top;margin-top:1em;">
-							Dr. Nakul Parameswar<br>Head of the Department<br>Assistant Professor<br><img style="height:18px;"
-								src="src/img/icons/mail.png"> : <a href="mailto:nakul@em.iith.ac.in"
-								target="_blank">nakul@em.iith.ac.in</a><br><br><a
-								href="https://sites.google.com/em.iith.ac.in/nakulparameswar" target="_blank">Profile
-								details</a>
-						</p>
-					</div>
-					<p style="margin-bottom:20px;width:40%" id="break"><br></p>
-					<div style="width:30%;float:left;float:top;">
-						<img style="height:240px ;padding: 0;border: 1.5px;border-style: solid;border-color: black;"
-							src="src/img/faculty/LM_Maiyar.png">
-					</div>
-					<div style="width:70%;float: right;">
-						<p
-							style="min-height: 200px;font-size: 18px;padding-left:20px;border-left: 2px solid red;float: top;margin-top:1em;">
-							Dr. Lohithaksha Maniraj Maiyar<br>Assistant Professor<br><img style="height:18px;"
-								src="src/img/icons/mail.png"> : <a href="mailto:l.maiyar@em.iith.ac.in"
-								target="_blank">l.maiyar@em.iith.ac.in</a><br><br><a href="src/doc/LM_Maiyar_CV.pdf"
-								target="_blank">Profile details</a>
-						</p>
-					</div>
-					<p style="margin-bottom:20px;width:40%" id="break"><br></p>
-					<div style="width:30%;float:left;float:top;">
-						<img style="height:240px ;padding: 0;border: 1.5px;border-style: solid;border-color: black;"
-							src="src/img/faculty/Dr.-Ranapratab-1-300x300.jpg">
-					</div>
-					<div style="width:70%;float: right;">
-						<p
-							style="min-height: 200px;font-size: 18px;padding-left:20px;border-left: 2px solid red;float: top;margin-top:1em;">
-							Dr. Rana Pratap Maradana<br>Assistant Professor<br><img style="height:18px;"
-								src="src/img/icons/mail.png"> : <a href="mailto:ranapratap@em.iith.ac.in"
-								target="_blank">ranapratap@em.iith.ac.in</a><br><br><a
-								href="https://sites.google.com/view/ranapratap/home" target="_blank">Profile details</a>
-						</p>
-					</div>
-					<p style="margin-bottom:20px;width:40%" id="break"><br></p>
-					<div style="width:30%;float:left;float:top;">
-						<img style="height:240px ;padding: 0;border: 1.5px;border-style: solid;border-color: black;"
-							src="src/img/faculty/Jayshree1.JPG">
-					</div>
-					<div style="width:70%;float: right;">
-						<p
-							style="min-height: 200px;font-size: 18px;padding-left:20px;border-left: 2px solid red;float: top;margin-top:1em;">
-							Dr. Jayshree Patnaik<br>Assistant Professor<br><img style="height:18px;"
-								src="src/img/icons/mail.png"> : <a href="mailto:jpatnaik@em.iith.ac.in" target="_blank">
-								jpatnaik@em.iith.ac.in</a><br><br><a
-								href="https://sites.google.com/em.iith.ac.in/jayshreepatnaik/bio"
-								target="_blank">Profile details</a>
-						</p>
-					</div>
-					<p style="margin-bottom:20px;width:40%" id="break"><br></p>
-					<div style="width:30%;float:left;float:top;">
-						<img style="height:240px ;padding: 0;border: 1.5px;border-style: solid;border-color: black;"
-							src="src/img/faculty/Dr.Rajesh_3.jpeg">
-					</div>
-					<div style="width:70%;float: right;">
-						<p
-							style="min-height: 200px;font-size: 18px;padding-left:20px;border-left: 2px solid red;float: top;margin-top:1em;">
-							Dr. Rajesh Ittamalla<br>Assistant Professor<br><img style="height:18px;"
-								src="src/img/icons/mail.png"> : <a href="mailto:rajeshittamalla@em.iith.ac.in"
-								target="_blank"> rajeshittamalla@em.iith.ac.in</a><br><br><a
-								href="https://sites.google.com/em.iith.ac.in/my-profile/home" target="_blank">Profile
-								details</a>
-						</p>
-					</div>
-				</div>
-				<p style="width: 60%;" id="break"><br></p>
-				<br>
-				<div id="Students">
-					<h1 style="color:red;text-align: center; margin-bottom: 30px;">PhD Scholars</h1>
-					<div id="students-section">
-						<div class="students-row">
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Student1.jpg">
-								<div class="student-details">
-									<p>Mr. Rajeev Balakrishnan</p>
-									<p>EM20RESCH14001</p>
-									<p>Area of Research: Organizational
-										Behaviour</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Student2.png">
-								<div class="student-details">
-									<p>Mr. Vishnu Vinjarapu</p>
-									<p>EM20RESCH14002</p>
-									<p>Area of Research: Human Resource
-										Management</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Student3.jpg">
-								<div class="student-details">
-									<p>Mr. Rishab Prasad Soni</p>
-									<p>EM21RESCH01001</p>
-									<p>Area of Research: General Management, Marketing
-										Management and Advertising</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/indira.jpg">
-								<div class="student-details">
-									<p>Ms. Indira Roy</p>
-									<p>EM22RESCH01001</p>
-									<p>Area of Research: Operations Management and Supply Chain
-										Management</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/khushnuma.jpeg">
-								<div class="student-details">
-									<p>Ms. Khushnuma Wasi</p>
-									<p>EM22RESCH01002</p>
-									<p>Area of Research: Entrepreneurship</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/srinivasaraodangeti.jpg">
-								<div class="student-details">
-									<p>Mr. Srinivasa Rao Dangeti</p>
-									<p>EM22RESCH04001</p>
-									<p>Area of Research: Strategy and
-										Innovation</p>
-								</div>
-							</div>
-						</div>
-						<div class="students-row">
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/viveksinghal.jpg">
-								<div class="student-details">
-									<p>Mr. Vivek Singhal</p>
-									<p>EM22RESCH04002</p>
-									<p>Area of Research: Operations, Supply Chain & Quality
-										Management</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/B Vinod Kumar.jpg">
-								<div class="student-details">
-									<p>Mr. Vinod Kumar Burragoni</p>
-									<p>EM22RESCH11001</p>
-									<p>Area of Research: Strategic Management and
-										Entrepreneurship</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Aishwarya Jain.jpg">
-								<div class="student-details">
-									<p>Ms. Aishwarya Jain</p>
-									<p>EM23RESCH01001</p>
-									<p>Area of Research: Entrepreneurial Marketing and Branding</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/ErellySuman.jpeg">
-								<div class="student-details">
-									<p>Mr. Erelly Suman</p>
-									<p>EM23RESCH01002</p>
-									<p>Area of Research: Entrepreneurial Marketing</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Praveen Kumar.jpeg">
-								<div class="student-details">
-									<p>Mr. Praveen Kumar</p>
-									<p>EM23RESCH01003</p>
-									<p>Area of Research: Resilient Supply Chain Management</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Akhila Raju.jpeg">
-								<div class="student-details">
-									<p>Ms. Akhila Raju</p>
-									<p>EM23RESCH01004</p>
-									<p>Area of Research: Banking and Finance</p>
-								</div>
-							</div>
-						</div>
-						<div class="students-row">
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Geethanjali.jpg">
-								<div class="student-details">
-									<p>Ms. Geethanjali V</p>
-									<p>EM23RESCH11002</p>
-									<p>Area of Research: Financial Derivatives</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Manimaran V.jpg">
-								<div class="student-details">
-									<p>Mr. Manimaran V</p>
-									<p>EM23RESCH11003</p>
-									<p>Area of Research: Humanitarian Supply Chain Management</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Richa Sureka.jpg">
-								<div class="student-details">
-									<p>Ms. Richa Sureka</p>
-									<p>EM23RESCH11004</p>
-									<p>Area of Research: Sustainable Finance</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Vanlalthazuali.jpg">
-								<div class="student-details">
-									<p>Ms. Vanlalthazuali</p>
-									<p>EM23RESCH11005</p>
-									<p>Area of Research: Entrepreneurship</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Vimala Raja Priya Mudapaka.jpg">
-								<div class="student-details">
-									<p>Ms. Vimala Raja Priya Mudapaka</p>
-									<p>EM23RESCH11006</p>
-									<p>Area of Research: Entrepreneurship</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/NAGA SURESH KUMAR YADAVALLI.jpg">
-								<div class="student-details">
-									<p>Mr. Naga Suresh Kumar Yadavalli</p>
-									<p>EM23RESCH14001</p>
-									<p>Area of Research: Energy Strategy & Finance</p>
-								</div>
-							</div>
-						</div>
-						<div class="students-row">
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Ramachandra Raju Bhupathiraju.jpg">
-								<div class="student-details">
-									<p>Mr. Ramachandra Raju Bhupathiraju</p>
-									<p>EM23RESCH14002</p>
-									<p>Area of Research: E-Waste and enabling a circular economy</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Sairam Kulkarni.jpg">
-								<div class="student-details">
-									<p>Mr. Sairam Kulkarni</p>
-									<p>EM23RESCH14003</p>
-									<p>Area of Research: Supply chain agility and risk management</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Yedlapalli Ramakrishna.jpg">
-								<div class="student-details">
-									<p>Mr. Yedlapalli Ramakrishna</p>
-									<p>EM23RESCH14004</p>
-									<p>Area of Research: Banking</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/G Venket Ramana.jpg">
-								<div class="student-details">
-									<p>Mr. G Venket Ramana</p>
-									<p>EM24RESCH01001</p>
-									<p>Area of Research: Corporate Finance</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Saloni.jpg">
-								<div class="student-details">
-									<p>Ms. Saloni</p>
-									<p>EM24RESCH01002</p>
-									<p>Area of Research: Marketing</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Subhajit Bhattacharjee.jpg">
-								<div class="student-details">
-									<p>Mr. Subhajit Bhattacharjee</p>
-									<p>EM24RESCH01003</p>
-									<p>Area of Research: Finance and Strategy</p>
-								</div>
-							</div>					
-						</div>
-						<div class="students-row">							
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Ankur Sharma.jpg">
-								<div class="student-details">
-									<p>Mr. Ankur Sharma</p>
-									<p>EM24RESCH04001</p>
-									<p>Area of Research: Entrepreneurship</p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Vinnakota Bala Venkata Veerraj.jpg">
-								<div class="student-details">
-									<p>Mr. Vinnakota Bala Venkata Veerraj</p>
-									<p>EM24RESCH04002</p>
-									<p>Area of Research: AI in insurance</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<p style="width: 60%;" id="break"><br></p>
-					<h1 style="color:red;text-align: center; margin: 30px 0;">MTech Students</h1>
-					<div id="students-section">
-						<div class="students-row">
-							<div class="student-card">
-								<img class="student-img"
-									src="src/img/students/MTech/Vishnu Sai Charan Reddy Komalla.jpg">
-								<div class="student-details">
-									<p>Mr. Vishnu Sai Charan Reddy Komalla</p>
-									<p>EM22MTECH14001</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/vishnu-sai-charan-reddy-komalla-07a448203"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em22mtech14001@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech/kannan.jpg">
-								<div class="student-details">
-									<p>Mr. Kannan N S</p>
-									<p>EM22MTECH14002</p>
-									<p><a style="color: #0077B5;" href="https://www.linkedin.com/in/kannan-n-s-/"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em22mtech14002@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech/Shubhi.jpg">
-								<div class="student-details">
-									<p>Ms. Shubhi Shrotriya</p>
-									<p>EM22MTECH14003</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/shubhi-shrotriya-190573162"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em22mtech14003@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech/Dhruvin Atulkumar Shah.jpg">
-								<div class="student-details">
-									<p>Mr. Dhruvin Shah</p>
-									<p>EM22MTECH14004</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/dhruvin-shah-a69737199"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em22mtech14004@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech/Jayna.jpg">
-								<div class="student-details">
-									<p>Ms. Jayna Tanna</p>
-									<p>EM22MTECH14005</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/jayna-tanna-64933a178/"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em22mtech14005@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech/Sanjana.jpg">
-								<div class="student-details">
-									<p>Ms. P Sanjana</p>
-									<p>EM22MTECH14006</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/sanjana-pandari-247b02234/"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em22mtech14006@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-						</div>
-						<div class="students-row">
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech/athrva-2.jpg">
-								<div class="student-details">
-									<p>Mr. Atharva Mahajan</p>
-									<p>EM22MTECH14007</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/atharva-mahajan-307971234"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em22mtech14007@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech/Omkar.jpg">
-								<div class="student-details">
-									<p>Mr. Omkar Raut</p>
-									<p>EM22MTECH14008</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/omkar-raut-01222b200"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em22mtech14008@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img"
-									src="src/img/students/MTech/Kalyana Chakravarthi Thakkilapati.jpg">
-								<div class="student-details">
-									<p>Mr. Kalyan</p>
-									<p>EM22MTECH14009</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/mwlite/in/kalyana-chakravarthi-t-056848185"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em22mtech14009@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech/Saurabh.jpg">
-								<div class="student-details">
-									<p>Mr. Saurabh Madankar</p>
-									<p>EM22MTECH14010</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/saurabh-madankar-784122112"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em22mtech14010@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Dual degree/anand.jpg">
-								<div class="student-details">
-									<p>Mr. Dontu Anand Sai</p>
-									<p>EE19BTECH11007</p>
-									<p>Dual degree (BTech Major - Electrical Engineering)</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/dontu-anand-sai-379aa823a/"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:ee19btech11007@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/Dual degree/Ananyan Kalepalli_AK.jpg">
-								<div class="student-details">
-									<p>Mr. Kalepalli N V S D M Ananyan </p>
-									<p>EE19BTECH11013</p>
-									<p>Dual degree (BTech Major - Electrical Engineering)</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/n-v-s-d-m-ananyan-kalepalli-035288228"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:ee19btech11013@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-						</div>
-						<div class="students-row">
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Abhijeet Dewangan.jpeg">
-								<div class="student-details">
-									<p>Mr. Abhijeet Dewangan</p>
-									<p>EM23MTECH14001</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/adewangan/"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech14001@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Abhishek Nahire.jpeg">
-								<div class="student-details">
-									<p>Mr. Abhishek Pravin Nahire</p>
-									<p>EM23MTECH14002</p>
-									<p><a style="color: #0077B5;"
-											href="http://linkedin.com/in/abhishek-nahire-258556236"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech14002@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Anadi Gautam.jpeg">
-								<div class="student-details">
-									<p>Mr. Anadi Gautam</p>
-									<p>EM23MTECH14003</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/anadigautam"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech14003@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Ankit Jain.jpeg">
-								<div class="student-details">
-									<p>Mr. Ankith jain S</p>
-									<p>EM23MTECH14004</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/ankith-jain-384a6a168/"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech14004@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Ashish Kumar.jpg">
-								<div class="student-details">
-									<p>Mr. Ashish Kumar</p>
-									<p>EM23MTECH14005</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/ashish-kumar-98b98b68?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzFVkW8HHTFO%2FetKUoQMSGA%3D%3D"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech14005@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Mehul Mishra.png">
-								<div class="student-details">
-									<p>Mr. Mehul Mishra</p>
-									<p>EM23MTECH14006</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/mehul-mishra-42a181154/"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech14006@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-						</div>
-						<div class="students-row">
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/TN Murthy.jpeg">
-								<div class="student-details">
-									<p>Mr. TN  Murthy</p>
-									<p>EM23MTECH14007</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/tn-murthy-02a412271?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BjJOqHFY0SMqqFXQaKi7%2FPA%3D%3D"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech14007@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Pratyusha Gudadoor.jpeg">
-								<div class="student-details">
-									<p>Ms. Pratyusha Gudadoor</p>
-									<p>EM23MTECH14008</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/pratyusha-gudadoor-800b36188"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech14008@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Utkarsh Shambharkar.jpeg">
-								<div class="student-details">
-									<p>Mr. Utkarsh Shambharkar</p>
-									<p>EM23MTECH14009</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/utkarshshambharkar9527835492?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0vlAbqKvTJGfIeb4SnHCkQ%3D%3D"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech14009@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Chetan Sai P.jpeg">
-								<div class="student-details">
-									<p>Mr. Chetan Sai Pyla</p>
-									<p>EM23MTECH11001</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/chetan-sai-pyla-1b7758286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech11001@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Dharmendra Singh Yadav.jpeg">
-								<div class="student-details">
-									<p>Mr. Dharmendra Singh Yadav</p>
-									<p>EM23MTECH11002</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/dharmendra-singh-yadav-50b4a0153/"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech11002@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Jay Patel.jpeg">
-								<div class="student-details">
-									<p>Mr. Jay Patel</p>
-									<p>EM23MTECH11003</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/jay-patel-b30884193"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech11003@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-						</div>
-						<div class="students-row">
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Karan Mahato.jpg">
-								<div class="student-details">
-									<p>Mr. Karan Mahato</p>
-									<p>EM23MTECH11004</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/karan-mahato-ab01b7241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech11004@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Anusree K D.jpeg">
-								<div class="student-details">
-									<p>Ms. K. D. Anusree</p>
-									<p>EM23MTECH11005</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/anusree-k-d-b6a33814b"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech11005@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Krishna Kumar.jpeg">
-								<div class="student-details">
-									<p>Mr. Krishna Kumar</p>
-									<p>EM23MTECH11006</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/krishna-kumar-2b2121169/"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech11006@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Safder Shakil.jpeg">
-								<div class="student-details">
-									<p>Mr. Safder Shakil</p>
-									<p>EM23MTECH11007</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/safder-shakil-9b35b2249/"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech11007@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Sarang Kukade.jpg">
-								<div class="student-details">
-									<p>Mr. Sarang Kukade</p>
-									<p>EM23MTECH11008</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/sarang-kukade-6469101ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech11008@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-							<div class="student-card">
-								<img class="student-img" src="src/img/students/MTech new/Shivanjali Patil.jpeg">
-								<div class="student-details">
-									<p>Ms. Shivanjali Prakash Patil</p>
-									<p>EM23MTECH11009</p>
-									<p><a style="color: #0077B5;"
-											href="https://www.linkedin.com/in/shivanjali-patil-262338236?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkXPk9aQES46VikmHxP3M5w%3D%3D"><i
-												class="fa-brands fa-linkedin"></i></a><a
-											style="color: #0077B5; margin-left: 10px;"
-											href="mailto:em23mtech11009@iith.ac.in"><i
-												class="fa-solid fa-envelope"></i></a></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+<!-- News and Annocements -->
+<section class="news-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="d-flex justify-content-between">
+                    <p class="heading"><span>Upcoming Events</span></p>
+                    <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+                </div>
+                <div id="UpcomingEvents" class="row events-row"></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-between">
+                    <p class="heading"><span>Announcements</span></p>
+                    <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+                </div>
+                <div class="card news-card">
+                    <div class="card-body">
+                        <marquee id="news" direction="up" scrollamount="2" width="100%" height="240"></marquee>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-				<!----------------------------------------------------->
-				<p style="clear: both"><br></p>
-				<p style="color:red" id="break"><br></p>
-				<br>
-				<h1 style="color:red;text-align: center;">Funded Projects</h1>
-				<div style="width:80%;margin: auto;" id="Funded Projects">
-					<ul style="margin-top: 30px;" class="Funded Projects">
-						<li>
-							<p style="width:90%;font-size: 18px;margin-left: 16px; margin-top: 0px;font-weight: bold">
-								Creating Agritourism Experiences: Customer's Perspectives, Service Provider's Perspectives and Entrepreneurial Perspective<br>
-								PI: Dr. Rajesh Ittamalla<br>
-								Funding Body: Indian Council of Social Science Research (ICSSR)<br>
-							</p>
-						</li>
-					</ul>
-				</div>
-				<!----------------------------------------------------->
-				<p style="clear: both"><br></p>
-				<p style="color:red" id="break"><br></p>
-				<br>
-				<h1 style="color:red;text-align: center;">Student Achievements</h1>
-				<div style="width:80%;margin: auto;" id="studentAchievements">
-					<ul style="margin-top: 30px;" class="studentAchievementsList">
-						<li>
-							<p style="width:90%;font-size: 18px;margin-left: 16px;">
-								Mr. Manimaran V, PhD scholar with the supervision of Dr. Lohithaksha M Maiyar received the best presentation award 
-								at the International Conference on Emerging Technologies, Analytics and Operations (ICETAO 2024) organized by IBS Hyderabad.
-							</p>
-						</li>
-						<li>
-							<p style="width:90%;font-size: 18px;margin-left: 16px;">
-								Mr. Rishab Prasad Soni, PhD scholar with the supervision of Dr. M.P.Ganesh received the best methodology award 
-								at the 8th International Marketing Strategy and Policy Research Conference hosted by Goa Institute of Management 
-								in collaboration with Bharati College, Delhi University, Newcastle University, Lancaster University, 
-								University of the Arts London and Brunel University London.
-							</p>
-						</li>
-						<li>
-							<p style="width:90%;font-size: 18px;margin-left: 16px;">
-								Ms. Indira Roy, PhD scholar with the supervision of Dr. Lohithaksha M Maiyar received the best
-								student paper award at the 12th International conference on Soft Computing for Problem
-								Solving (SocPros 2023) organized by IIT Roorkee, India.
-							</p>
-						</li>
-						<li>
-							<p style="width:90%;font-size: 18px;margin-top: 10px;margin-left: 16px;">
-								Ms. Indira Roy, PhD scholar with the supervision of Dr. Lohithaksha M Maiyar received
-								3rd best paper award with a cash prize of 50,000 INR in the International Conference on Data
-								Analytics in Public Procurement and Supply Chain jointly organized in 2022 by Arun
-								Jaitley National Institute of Financial Management, Faridabad and Indian Institute of
-								Management,Mumbai.
-							</p>
-						</li>
-					</ul>
-				</div>
 
-				<!----------------------------------------------------->
-				<p style="clear: both"><br></p>
-				<p style="color:red" id="break"><br></p>
-				<br>
-				<h1 style="color:red;text-align: center;">Contact Us</h1>
-				<div style="width:80%;margin: auto;" id="contactus">
-					<br><br>
-					<img style="height: 4vw; float:left;" src="src/img/icons/location.png">
-					<p style="font-size: 18px;padding-left:2vw;float:left">Dept. of Entrepreneurship and
-						Management<br>Indian Institute of Technology Hyderabad<br>Kandi, Sangareddy,<br>Telangana,
-						India. 502285 <a style="font-size:1vw;" href="https://goo.gl/maps/mnNcTfSsUjxGEvjy9"
-							target="_blank">Get Direction</a></p>
-					<br><br>
-					<img style="height: 3vw;clear: both; float:left;" src="src/img/icons/mail.png">
-					<p style="font-size: 18px;padding-left:2vw;float:left"><a href="mailto:head@em.iith.ac.in"
-							target="_blank">office@em.iith.ac.in</a></p>
-					<br><br>
-					<p style="font-size: 18px;;float:left;clear: both;"></p>
-					<br><br>
-				</div>
-				<p style="width: 40%;" id="break"><br></p>
-				<div style="width:80%;margin: auto;font-size: 18px;">
-					<p><b>Website credits:</b></p>
-					<ul>
-						<li>Mohammed Wakif Amin Hussain - la20ma11001</li>
-						<li>Chintu Varun Rao - ma19btech11009</li>
-					</ul>
-				</div>
-				<!------------------------------>
+<section id="recentActivities" class="section recent-activities">
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <p class="heading"><span>Recent Activities</span></p>
+            <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+        </div>
+        <!-- <h3 class="section-title heading"><span>Recent Activities</span></h3> -->
+        <div class="gallery" id="Events"></div>
+    </div>
+</section>
 
-				<div id="footer">
-					<br>
-					<br>
-				</div>
-				<script>
-					var slideIndex = 1;
-					showDivs(slideIndex);
 
-					function plusDivs(n) {
-						showDivs(slideIndex += n);
-					}
+<section class="achievements-section">
+    <div class="container">
+        <p class="heading"><span>Student Achievements</span></p>
+        <div class="slider-container">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner slider-track" id="Achievements"></div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+</section>
 
-					function currentDiv(n) {
-						showDivs(slideIndex = n);
-					}
 
-					function showDivs(n) {
-						var i;
-						var x = document.getElementsByClassName("mySlides");
-						var dots = document.getElementsByClassName("demo");
-						if (n > x.length) { slideIndex = 1 }
-						if (n < 1) { slideIndex = x.length }
-						for (i = 0; i < x.length; i++) {
-							x[i].style.display = "none";
-						}
-						for (i = 0; i < dots.length; i++) {
-							dots[i].className = dots[i].className.replace(" w3-red", "");
-						}
-						x[slideIndex - 1].style.display = "block";
-						dots[slideIndex - 1].className += " w3-red";
-					}
-				</script>
-</body>
 
-</html>
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div class="row px-md-0">
+            <!-- <div class="d-flex">
+                <a class="" href="#">
+                    <img src="./src/img/icons/logo.png" class="img-fluid" alt="Logo">
+                    <sapn class="mx-2 em-txt">Department Of Entrepreneurship and Management</span>
+                </a>
+            </div> -->
+            <div class="row d-flex justify-content-between">
+                <div class="em-txt">
+                    <img src="./src/img/icons/logo.png" class="img-fluid" alt="Logo">
+                    <sapn>Department of Entrepreneurship and Management</span>
+                </div>
+                <div class="col-lg-4 col-6 mt-4 mt-md-0">
+                    <ul>
+                        <li><span class="contact"><i class="bi bi-envelope"></i> office@em.iith.ac.in</span></li>
+                        <li>
+                            <address>
+                                Department of Entrepreneurship and Management,<br>
+                                Indian Institute of Technology Hyderabad,<br>
+                                Kandi, Sangareddy,<br>
+                                Telangana,<br>
+                                India. 502285.
+                            </address>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 mt-4 mt-md-0">
+                    <ul>
+                        <li>Important Links</li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./v&m.html">Vision and Mission</a></li>
+                        <li><a href="./faculty.html">Faculty Members</a></li>
+                        <li><a href="./research.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 mt-4 mt-md-0">
+                    <ul>
+                        <li>Important Links</li>
+                        <li><a href="./events.html">Events</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="d-flex justify-content-between">
+            <p class="text-nowrap cpright">@ Department of Entrepreneurship and Management, IIT Hyderabad. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://in.linkedin.com/company/department-of-entrepreneurship-and-management-iit-hyderabad"><i class="bi bi-linkedin"></i></a>
+                <!-- <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a> -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- loading -->
+<div class="loading-overlay" id="loading">
+    <div>
+        <img src="./src/img/icons/logo.png" alt="University Logo" class="logo img-fluid mx-auto">
+        <p class="h6">Department of Entrepreneurship and Management</p>
+        <p>Indian Institute of Technology Hyderabad</p>
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+    </div>
+</div>
+
+<!-- JavaScript to handle pausing and resuming the animation -->
+<!-- <script>
+  const sliderTrack = document.querySelector('.slider-track');
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+      sliderTrack.style.animationPlayState = 'paused';
+    });
+
+    card.addEventListener('mouseleave', () => {
+      sliderTrack.style.animationPlayState = 'running';
+    });
+  });
+</script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const loading = document.getElementById('loading');
+        loading.style.display = 'flex';
+        let FULL_URL = "https://script.google.com/macros/s/AKfycbwdxVt4OsxgZMuSsVmyUO_7OJ1HLrQzW-uUSoPHgpJjnjP9NxFcmJArIwB0qyM05zB4yQ/exec";
+        
+        fetch(FULL_URL)
+        .then(response => {
+            loading.style.display = 'none';
+            console.log(response);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(eventsData => {
+            if (!Array.isArray(eventsData.data)) {
+                throw new Error('Fetched data is not an array');
+            }
+            
+            const currentDate = new Date();
+            const UpcomingEvents = document.getElementById('UpcomingEvents');
+
+            UpcomingEvents.innerHTML = 'Events are Coming Soon!';
+            if(eventsData.data[0]){
+            eventsData.data[0].forEach(event => {
+                const eventDate = new Date(event.start_date);
+                const end_eventDate = new Date(event.end_data);
+
+                if (eventDate > currentDate) {
+                    UpcomingEvents.innerHTML = '';
+                    UpcomingEvents.innerHTML += `
+                    <div class="col-md-6">
+                        <div class="list-group-item list-group-item-action mb-4 rounded">
+                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                <div class="date">
+                                    <div class="month">${eventDate.toDateString().slice(3,8)}</div>
+                                    <div class="day">${eventDate.toDateString().slice(8,10)}</div>
+                                    <div class="year">${eventDate.toDateString().slice(10,)}</div>
+                                </div>
+                                <div class="info">
+                                    <h6 class="mb-1">${event.title}</h6>
+                                    <small class="text-body-secondary">${event.venue}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+            });
+        }else{UpcomingEvents.innerHTML = 'Events are Coming Soon!';}
+
+            const Events = document.getElementById('Events');
+    
+            eventsData.data[1].forEach(event => {
+                const eventDate = new Date(event.start_date);
+                const end_eventDate = new Date(event.end_data);
+                if (eventDate < currentDate) {
+                Events.innerHTML += `
+                <div class="gallery-item">
+                <img src="${event.image}" alt="${event.image}">
+                <div class="text-overlay">
+                    <div class="text-overlay-content">
+                        <h5>${event.title}</h5><br/>
+                        <a href="./events.html" class="btn-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+                `;
+        }
+            });
+    
+            const News = document.getElementById('news');
+    
+            eventsData.data[2].forEach(news => {
+                News.innerHTML += `
+                <p class="news-card-text">
+                    <a href="${news.link}">${news.title}</a>
+                    <small class="news-text-body-secondary">${news.date}</small>
+                </p>
+                `;
+            });
+
+            const Achievements = document.getElementById('Achievements');
+    
+            eventsData.data[3].forEach(achievement => {
+                Achievements.innerHTML += `
+                <div class="carousel-item achievement-item">
+                    <div class="card">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <img src="${achievement.Image}" class="img-fluid rounded-start" alt="${achievement.Image}">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">${achievement.name}</h5>
+                                    <p class="card-text">${achievement.desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+            const firstChild = document.querySelector('.achievement-item');
+            if (firstChild) {
+                firstChild.classList.add('active');
+            }
+        })
+        .catch(error => {
+            loading.style.display = 'none';
+            console.error('There was a problem with the fetch operation:', error);
+        });
+            });
+    </script>
+         <script>
+            // Function to scroll the list group to the bottom
+            function scrollToBottom() {
+                var listGroup = document.getElementById('listGroup');
+                listGroup.scrollTop = listGroup.scrollHeight;
+            }
+        
+            // Call scrollToBottom function when content is loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                scrollToBottom();
+            });
+        </script> 
+    </body>
+    </html>
