@@ -93,21 +93,36 @@ function renderFaculty(data) {
 // Mtech Students
 function renderMtechStudents(data) {
     const container = document.getElementById('profilesRow');
+    const yearSelect = document.getElementById('yearSelect');
     if (!container) return;
+    if (!yearSelect) return;
+
+    const batch  = new URLSearchParams(window.location.search).get('batch')
 
     if (!Array.isArray(data.data)) {
         throw new Error('Fetched data is not an array');
     }
 
     let upcoming_year = new URLSearchParams(window.location.search).get('year');
+    upcoming_year=null;
     if(upcoming_year==null){
         let date = new Date();
         upcoming_year = date.getFullYear()+1;
     }
-    document.getElementById('yearSelect').value = upcoming_year;
+    
+    yearSelect.innerHTML = `
+    <option value="${upcoming_year-2}">${upcoming_year-2}</option>
+    <option value="${upcoming_year-1}">${upcoming_year-1}</option>
+    `;
+    if (batch!=null){
+        document.getElementById('yearSelect').value = batch;
+    }
+    else{
+        document.getElementById('yearSelect').value = upcoming_year-2;
+    }
 
     container.innerHTML = '';
-    data.data.slice(1).forEach(student => {
+    data.data.slice(0).forEach(student => {
         container.innerHTML += `
             <div class="col-md-6 mb-4">
                 <div class="card">
@@ -121,6 +136,7 @@ function renderMtechStudents(data) {
                                 <p class="card-text">${student.roll_number}</p>
                                 <p class="card-text">${student.email}</p>
                                 <a href="${student.linkedin}"><i class="bi bi-linkedin"></i></a>
+                                ${student.website ? ` <a class="btn btn-sm" target="_blank" href="${student.website}">Profile</a>`: ''}
                             </div>
                         </div>
                     </div>
@@ -277,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
             render: renderFaculty
         },
         'm_tech_students.html':{
-            url:'https://script.google.com/macros/s/AKfycbwPvrFZIr1yQv1PcH_xM591gsJzjIsuv8U05TuDXQpEjJIMlac__4rq5vSccnRJG5HQZA/exec',
+            url: `https://script.google.com/macros/s/AKfycbyWIkhVOvqFNxDuEaoJBeuYnHm9ZG_ZBmuCm6yb5gcehmXwDQJECwTLtpBerZvkQLUi7A/exec?batch=${new URLSearchParams(window.location.search).get('batch') ?? new Date().getFullYear()-1}`,
             render: renderMtechStudents
         },
 
