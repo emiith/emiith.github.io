@@ -228,7 +228,7 @@
     
         if(upcoming_year==null){
             let date = new Date();
-            upcoming_year = date.getFullYear();
+            upcoming_year = date.getFullYear()-1;
         }
         document.getElementById('yearSelect').value = upcoming_year;
         let FULL_URL = 'https://script.google.com/macros/s/AKfycbz40vgcPN6ZGcUHs6mYkw9sjZn0C5VfCJ8_QDqLVccEK7EzWZ-iJRSOA2OOQABJg7yPhA/exec?joiningyear='+upcoming_year+'';
