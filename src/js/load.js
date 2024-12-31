@@ -111,14 +111,14 @@ function renderMtechStudents(data) {
     }
     
     yearSelect.innerHTML = `
+    <option value="${upcoming_year-3}">${upcoming_year-3}</option>
     <option value="${upcoming_year-2}">${upcoming_year-2}</option>
-    <option value="${upcoming_year-1}">${upcoming_year-1}</option>
     `;
     if (batch!=null){
         document.getElementById('yearSelect').value = batch;
     }
     else{
-        document.getElementById('yearSelect').value = upcoming_year-2;
+        document.getElementById('yearSelect').value = upcoming_year-3;
     }
 
     container.innerHTML = '';
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
             render: renderFaculty
         },
         'm_tech_students.html':{
-            url: `https://script.google.com/macros/s/AKfycbyWIkhVOvqFNxDuEaoJBeuYnHm9ZG_ZBmuCm6yb5gcehmXwDQJECwTLtpBerZvkQLUi7A/exec?batch=${new URLSearchParams(window.location.search).get('batch') ?? new Date().getFullYear()-1}`,
+            url: `https://script.google.com/macros/s/AKfycbyWIkhVOvqFNxDuEaoJBeuYnHm9ZG_ZBmuCm6yb5gcehmXwDQJECwTLtpBerZvkQLUi7A/exec?batch=${new URLSearchParams(window.location.search).get('batch') ?? new Date().getFullYear()-2}`,
             render: renderMtechStudents
         },
 
