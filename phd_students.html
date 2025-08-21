@@ -87,6 +87,7 @@
                                 </ul>
                             </li> -->
                             <li><a class="dropdown-item" href="./phd_admission.html" id="phd_pro"><span> PhD</span></a></li>
+                            <li><a class="dropdown-item" href="./mtech_admission.html" id="mtech_pro"><span> MTech</span></a></li>
 
                         </ul>
                     </li>
@@ -99,7 +100,7 @@
                             <li class="dropend">
                                 <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Student <i class="bi bi-chevron-right"></i></span></a>
                                 <ul class="dropdown-content dropdown-menu shadow">
-                                    <a class="dropdown-item" href="./m_tech_students.html" id="drop_p"><span>M.Tech</span></a>
+                                    <a class="dropdown-item" href="./m_tech_students.html" id="drop_p"><span>MTech</span></a>
                                     <a class="dropdown-item active" href="./phd_students.html" id="drop_p"><span>PhD</span></a>
                                 </ul>
                             </li>
@@ -136,6 +137,7 @@
                       <option value="2022">2022</option>
                       <option value="2023">2023</option>
                       <option value="2024">2024</option>
+                      <option value="2025">2025</option>
                     </select>
                   </form>
             </div>
@@ -167,7 +169,7 @@
                                 Indian Institute of Technology Hyderabad,<br>
                                 Kandi, Sangareddy,<br>
                                 Telangana,<br>
-                                India. 502285.
+                                India. 502284.
                             </address>
                         </li>
                     </ul>
@@ -231,7 +233,7 @@
             upcoming_year = date.getFullYear()-1;
         }
         document.getElementById('yearSelect').value = upcoming_year;
-        let FULL_URL = 'https://script.google.com/macros/s/AKfycbz40vgcPN6ZGcUHs6mYkw9sjZn0C5VfCJ8_QDqLVccEK7EzWZ-iJRSOA2OOQABJg7yPhA/exec?joiningyear='+upcoming_year+'';
+        let FULL_URL = 'https://script.google.com/macros/s/AKfycbwuYigqs398d3MdZxy55-NYGOBmjy3RBJkrz2Bd3ZhyDlofWi6KUiruVhtUKao7xsqltg/exec?joiningyear='+upcoming_year+'';
 
     fetch(FULL_URL)
     .then(response => {
