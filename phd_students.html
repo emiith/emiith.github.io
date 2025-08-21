@@ -137,6 +137,7 @@
                       <option value="2022">2022</option>
                       <option value="2023">2023</option>
                       <option value="2024">2024</option>
+                      <option value="2025">2025</option>
                     </select>
                   </form>
             </div>
@@ -232,6 +233,7 @@
             upcoming_year = date.getFullYear()-1;
         }
         document.getElementById('yearSelect').value = upcoming_year;
+        let FULL_URL = 'https://script.google.com/macros/s/AKfycbwuYigqs398d3MdZxy55-NYGOBmjy3RBJkrz2Bd3ZhyDlofWi6KUiruVhtUKao7xsqltg/exec?joiningyear='+upcoming_year+'';
         let FULL_URL = 'https://script.google.com/macros/s/AKfycbwuYigqs398d3MdZxy55-NYGOBmjy3RBJkrz2Bd3ZhyDlofWi6KUiruVhtUKao7xsqltg/exec?joiningyear='+upcoming_year+'';
 
     fetch(FULL_URL)
