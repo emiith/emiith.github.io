@@ -128,35 +128,35 @@
     <div class="container py-5">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-             <button class="nav-link active " id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Past Events</button>
-            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Upcoming Events</button>
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Past Events</button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Upcoming Events</button>
             </div>
         </nav>
-        
+  
         <div class="tab-content" id="nav-tabContent">
+            <!-- Past Events -->
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-                <div class="container py-5" id="upev">
+                <div class="container py-5">
+                    <div class="container form-container">
+                        <form id="yearForm">
+                            <label for="yearSelect">Year </label>
+                            <select id="yearSelect" name="year" onchange="submitForm()"></select>
+                        </form>
+                    </div>
                     <h5 class="heading text-start mb-5"><span>Past Events</span></h5>
                     <div class="row row-cols-1 row-cols-md-3 g-3" id="latestEvents"></div>
                 </div>
-                
             </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-                <div class="container form-container">
-                    <form id="yearForm">
-                        <label for="yearSelect">Year </label>
-                        <select id="yearSelect" name="year" onchange="submitForm()"></select>
-                    </form>
-                </div>
+            </div>
 
-           <div class="container py-5" id="upev">
+            <!-- Upcoming Events -->
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                <div class="container py-5">
                     <h5 class="heading text-start mb-5"><span>Upcoming Events</span></h5>
                     <div class="row row-cols-1 row-cols-md-3 g-3" id="upcomingEvents"></div>
-                </div>     
-            
+                </div>
             </div>
-          </div>
-
+       
     </div>
 </section>
 
