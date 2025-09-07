@@ -113,7 +113,7 @@ function renderMtechStudents(data) {
     yearSelect.innerHTML = `
     <option value="${upcoming_year-3}">${upcoming_year-3}</option>
     <option value="${upcoming_year-2}">${upcoming_year-2}</option>
-    <option value="${upcoming_year-1}">${upcoming_year-1}</option>
+    <option value="${upcoming_year}">${upcoming_year}</option>
     `;
     if (batch!=null){
         document.getElementById('yearSelect').value = batch;
