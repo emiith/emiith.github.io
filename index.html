@@ -77,18 +77,8 @@
                             <span>Admissions <i class="bi bi-chevron-down"></i></span> 
                         </a>
                         <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
-                            <!-- <li class="dropend">
-                                <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Academic Programs <i class="bi bi-chevron-right ms-3"></i></span></a>
-                                <ul class="dropdown-content dropdown-menu shadow">
-                                    <li><a class="dropdown-item" href="./minors_program.html" id="minor_pro"><span> Minor in Entrepreneurship</span></a></li>
-                                    <li><a class="dropdown-item" href="./major_program.html" id="major_pro"><span> Major in Entrepreneurship</span></a></li>
-                                    <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> MTech in Techno-Entrepreneurship</span></a></li>
-                                    <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PhD</span></a></li>
-                                </ul>
-                            </li> -->
                             <li><a class="dropdown-item" href="./MTech_admission.html" id="mtech_pro"><span> MTech</span></a></li>
                             <li><a class="dropdown-item" href="./phd_admission.html" id="phd_pro"><span> PhD</span></a></li>
-                            
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -104,7 +94,6 @@
                                     <a class="dropdown-item" href="./phd_students.html" id="drop_p"><span>PhD</span></a>
                                 </ul>
                             </li>
-                            <!-- <li><a class="dropdown-item" href="./staff.html" id="drop_p"><span>Staff</span></a></li> -->
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -113,9 +102,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./events.html" id="events"><span>Events</span></a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="./blog_list.html" id="blog"><span>Startups</span></a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="./contact.html" id="contact"><span>Contact</span></a>
                     </li>
@@ -173,15 +159,42 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="d-flex justify-content-between">
-                    <p class="heading"><span>Upcoming Events</span></p>
-                    <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+                    <p class="heading"><span>Industry Experts</span></p>
                 </div>
-                <div id="UpcomingEvents" class="row events-row"></div>
+                <!-- /////////////////////////////////////////////////////////-->
+                <!-- START: Industry lecturers carousel -->
+                <div id="industryLecturersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="./src/img/main_page/guestfaculty1.jpeg" class="d-block w-100 industry-hero-img" alt="Guest Faculty 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./src/img/main_page/guestfaculty2.jpeg" class="d-block w-100 industry-hero-img" alt="Guest Faculty 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./src/img/main_page/guestfaculty3.jpeg" class="d-block w-100 industry-hero-img" alt="Guest Faculty 3">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./src/img/main_page/guestfaculty4.jpeg" class="d-block w-100 industry-hero-img" alt="Guest Faculty 4">
+                    </div>
+                  </div>
+
+                  <button class="carousel-control-prev" type="button" data-bs-target="#industryLecturersCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#industryLecturersCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- END: Industry lecturers carousel -->
+                 <!-- /////////////////////////////////////////////////////////-->
+                <div id="UpcomingEvents" class="row events-row visually-hidden" aria-hidden="true"></div>  <!--Should be there to load below items-->
             </div>
             <div class="col-lg-4">
                 <div class="d-flex justify-content-between">
                     <p class="heading"><span>Announcements</span></p>
-                    <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
                 </div>
                 <div class="card news-card">
                     <div class="card-body">
@@ -198,9 +211,7 @@
     <div class="container">
         <div class="d-flex justify-content-between">
             <p class="heading"><span>Recent Activities</span></p>
-            <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
         </div>
-        <!-- <h3 class="section-title heading"><span>Recent Activities</span></h3> -->
         <div class="gallery" id="Events"></div>
     </div>
 </section>
@@ -225,18 +236,10 @@
     </div>
 </section>
 
-
-
 <!-- footer -->
 <footer>
     <div class="container">
         <div class="row px-md-0">
-            <!-- <div class="d-flex">
-                <a class="" href="#">
-                    <img src="./src/img/icons/logo.png" class="img-fluid" alt="Logo">
-                    <sapn class="mx-2 em-txt">Department Of Entrepreneurship and Management</span>
-                </a>
-            </div> -->
             <div class="row d-flex justify-content-between p-3">
                 <div class="em-txt">
                     <img src="./src/img/icons/logo.png" class="img-fluid" alt="Logo">
@@ -279,8 +282,6 @@
             <p class="cpright">@ Department of Entrepreneurship and Management, IIT Hyderabad. All Rights Reserved.</p>
             <div class="social-links">
                 <a href="https://in.linkedin.com/company/department-of-entrepreneurship-and-management-iit-hyderabad"><i class="bi bi-linkedin"></i></a>
-                <!-- <a href="#"><i class="bi bi-youtube"></i></a>
-                <a href="#"><i class="bi bi-twitter-x"></i></a> -->
             </div>
         </div>
     </div>
@@ -298,24 +299,9 @@
     </div>
 </div>
 
-<!-- JavaScript to handle pausing and resuming the animation -->
-<!-- <script>
-  const sliderTrack = document.querySelector('.slider-track');
-  const cards = document.querySelectorAll('.card');
-
-  cards.forEach(card => {
-    card.addEventListener('mouseover', () => {
-      sliderTrack.style.animationPlayState = 'paused';
-    });
-
-    card.addEventListener('mouseleave', () => {
-      sliderTrack.style.animationPlayState = 'running';
-    });
-  });
-</script> -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
+
     <script>
     document.addEventListener("DOMContentLoaded", function() {
         const loading = document.getElementById('loading');
@@ -430,17 +416,32 @@
         });
             });
     </script>
-         <script>
-            // Function to scroll the list group to the bottom
-            function scrollToBottom() {
-                var listGroup = document.getElementById('listGroup');
-                listGroup.scrollTop = listGroup.scrollHeight;
-            }
-        
-            // Call scrollToBottom function when content is loaded
-            document.addEventListener('DOMContentLoaded', function () {
-                scrollToBottom();
+    <!-- /////////////////////////////////////////////////////////-->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var c = document.querySelector("#industryLecturersCarousel");
+        if (c) {
+            var carousel = new bootstrap.Carousel(c, {
+                interval: 4000,
+                ride: "carousel",
+                pause: false
             });
-        </script> 
-    </body>
-    </html>
+            c.addEventListener('mouseenter', function () { carousel.pause(); });
+            c.addEventListener('mouseleave', function () { carousel.cycle(); });
+        }
+    });
+    </script>
+
+    <script>
+        function scrollToBottom() {
+            var listGroup = document.getElementById('listGroup');
+            if(listGroup) listGroup.scrollTop = listGroup.scrollHeight;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            scrollToBottom();
+        });
+    </script>
+    <!-- /////////////////////////////////////////////////////////-->
+</body>
+</html>
