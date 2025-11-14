@@ -292,7 +292,6 @@ function renderEvents(data) {
         }
     });
 }
-
 document.addEventListener("DOMContentLoaded", function() {
     const loading = document.getElementById('loading');
     loading.style.display = 'flex';
