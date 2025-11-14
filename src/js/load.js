@@ -48,47 +48,64 @@ function renderResearch(data) {
     });
 }
 
+// -----------------------------------------------------------------//
 
 // Faculty
 function renderFaculty(data) {
-    const container = document.getElementById('profilesContainer');
-    if (!container) return;
+    const core = document.getElementById("coreContainer");
+    const affiliate = document.getElementById("affiliateContainer");
+    const guest = document.getElementById("guestContainer");
 
-    if (!Array.isArray(data.data)) {
-        throw new Error('Fetched data is not an array');
-    }
-
-    container.innerHTML = '';
+    core.innerHTML = "";
+    affiliate.innerHTML = "";
+    guest.innerHTML = "";
 
     data.data.slice(1).forEach(faculty => {
-        container.innerHTML += `
+        let target;
+
+        // category from "name" field
+        const type = faculty.name.trim().toLowerCase();
+
+        if (type === "core") target = core;
+        else if (type === "affiliate") target = affiliate;
+        else if (type === "guest") target = guest;
+        else target = guest;
+
+        const card = `
             <div class="faculty-profile-card">
-            <div class="img-container">
-                <img src="${faculty.image}" id="facultyImage" class="faculty-image img-fluid" onerror="hideImg()"/>
-                <div class="text-overlay">
-                    <div class="">
-                        <a class="btn-primary" href="${faculty.profile_link}">View Profile</a>
+                <div class="img-container">
+                    <img src="${faculty.image}" class="faculty-image img-fluid" onerror="hideImg()"/>
+                    <div class="text-overlay">
+                        <div>
+                            <a class="btn-primary" href="${faculty.profile_link}">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="card-title">
+                    <h6 class="designation">${faculty.designation}</h6>
+                    
+                    <div class="row txt">
+                        <small>${faculty.position}</small>
+                    <!--    <small>${faculty.department}</small> -->
+                    </div>
+                </span>
+
+                <div class="card-body">
+                    <p>Email: ${faculty.email}</p>
+                    <div class="social-icons">
+                        <a href="${faculty.profile_link}">
+                            <i class="bi bi-person-circle"></i> Profile
+                        </a>
                     </div>
                 </div>
             </div>
-            <span class="card-title">
-                <h6>${faculty.name}</h6>
-                <p class="card-text designation">${faculty.designation}</p>
-                <div class="row txt">
-                    <small>${faculty.position}</small>
-                    <small>${faculty.department}</small>
-                </div>
-                </span>
-            <div class="card-body">
-                <p>Email: ${faculty.email}</p>
-                <div class="social-icons">
-                    <a href="${faculty.profile_link}"><i class="bi bi-person-circle"></i> Profile</a>
-                </div>
-            </div>
-        </div>
         `;
+        target.insertAdjacentHTML("beforeend", card);
     });
 }
+//------------------------------------------------------------//
+
 
 // Mtech Students
 function renderMtechStudents(data) {
@@ -297,8 +314,6 @@ document.addEventListener("DOMContentLoaded", function() {
             url: `https://script.google.com/macros/s/AKfycbyWIkhVOvqFNxDuEaoJBeuYnHm9ZG_ZBmuCm6yb5gcehmXwDQJECwTLtpBerZvkQLUi7A/exec?batch=${new URLSearchParams(window.location.search).get('batch') ?? new Date().getFullYear()-2}`,
             render: renderMtechStudents
         },
-
-
     };
 
     const page = location.pathname.split('/').pop();

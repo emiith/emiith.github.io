@@ -759,11 +759,12 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 
 .faculty-profile-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0rem 0rem 0rem 5rem;
+    justify-content: left;
+    /* align-items: center; */
     flex-wrap: wrap;
     position: relative;
-    min-height: 100vh;
+    /* min-height: 70vh; /////////////////////////////////////////////*/
 }
 
 .faculty-profile-card {
@@ -829,7 +830,7 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 
 .faculty-profile-card .card-body {
     padding: 20px;
-    padding-top: 80px;
+    padding-top: 50px; /*/////////////////////////////////*/
 }
 
 .designation{
@@ -871,6 +872,29 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
         width: 100%;
     }
 }
+/*------------------------------------------------------------------*/
+/* Faculty sections
+.faculty-section {
+    margin-bottom: 40px;
+}
+
+.section-heading {
+    text-align: left;
+    margin: 0 0 18px 8px;
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: 600;
+} */
+
+.small{
+    font-size: .875em;
+    font-weight: normal;
+}
+
+/* keep existing .faculty-profile-container rules; they are reused */
+
+
+/*------------------------------------------------------------------*/
 
 /* Student Profile */
 #profilesRow {
@@ -1067,6 +1091,29 @@ th {
     padding-bottom: 5px;
 }
 
+/*---------------------------------------------------------------------------*/
+
+.bottom-line{
+    position: relative;
+    margin-left: 5rem;
+}
+
+.bottom-line::after{
+    background: #f8714c;
+    width: 60px;
+    height: 6px;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    border-radius: 0%;
+    z-index: -1;
+    top: 36px;
+    left: 2px;
+    padding-bottom: 5px;
+}
+
+/*---------------------------------------------------------------------------*/
+
 .lineheading {
     display: flex;
     justify-content: space-between;
@@ -1242,4 +1289,42 @@ th {
         font-size: 0.75rem;
         /* word-break: break-all; */
     }
+}
+
+/* ========== Industry lecturers horizontal carousel ========== */
+#industryLecturersCarousel {
+  width: 100%;
+  --industry-hero-height: 320px;
+}
+
+@media (min-width: 1200px) {
+  #industryLecturersCarousel {
+    --industry-hero-height: 360px;
+  }
+}
+
+.industry-hero-img {
+  height: var(--industry-hero-height);
+  object-fit: cover;
+  display: block;
+}
+
+#industryLecturersCarousel .carousel-item img {
+  border-radius: 10px;
+}
+
+#industryLecturersCarousel .carousel-control-prev,
+#industryLecturersCarousel .carousel-control-next {
+  width: 3.2rem;
+  height: 3.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon,.carousel-control-next-icon{
+    /* filter: grayscale(100%); */
+    background-color: rgba(0, 0, 0, 0.489);
+    border-radius: .3rem;
+    padding: .5rem;
+    /* fill:#171e27 ; */
 }
