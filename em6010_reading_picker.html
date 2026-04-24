@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EM6010 — Reading Presentation Picker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f2;
+      color: #1a1a18;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .page { max-width: 700px; margin: 0 auto; }
+
+    header { margin-bottom: 2rem; }
+    header h1 { font-size: 22px; font-weight: 500; color: #1a1a18; margin-bottom: 4px; }
+    header p  { font-size: 14px; color: #6b6b67; }
+
+    .mode-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .mode-bar label { font-size: 13px; color: #6b6b67; }
+    select {
+      font-size: 13px;
+      padding: 6px 10px;
+      border: 0.5px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      color: #1a1a18;
+      outline: none;
+      cursor: pointer;
+    }
+    select:focus { box-shadow: 0 0 0 2px #9FE1CB; }
+
+    /* ── pool indicator ── */
+    .pool-section { margin-bottom: 1.5rem; }
+    .pool-title   { font-size: 12px; color: #6b6b67; margin-bottom: 8px; }
+    .pool-title span { font-weight: 500; color: #1a1a18; }
+    .pool-dots    { display: flex; gap: 4px; flex-wrap: wrap; max-width: 340px; }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #5DCAA5;
+      transition: background 0.35s, transform 0.35s;
+    }
+    .dot.used { background: #d0d0cc; transform: scale(0.7); }
+
+    /* ── buttons ── */
+    .controls { display: flex; gap: 10px; margin-bottom: 1.5rem; align-items: center; }
+    button {
+      padding: 8px 22px;
+      font-size: 13px;
+      border: 0.5px solid #bbb;
+      border-radius: 8px;
+      background: #fff;
+      color: #1a1a18;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.12s, transform 0.08s;
+    }
+    button:hover  { background: #f0f0ed; }
+    button:active { transform: scale(0.97); }
+    #reset-btn    { color: #6b6b67; }
+    #roll-btn     { font-weight: 500; }
+
+    .roll-icon { display: inline-block; }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    .spinning .roll-icon { animation: spin 0.5s cubic-bezier(0.4,0,0.2,1) forwards; }
+
+    /* ── cards ── */
+    .reading-card {
+      background: #fff;
+      border: 0.5px solid #ddd;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .reading-card.selected {
+      border: 1.5px solid #5DCAA5;
+      background: #E1F5EE;
+    }
+
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .card-enter { animation: cardIn 0.38s ease both; }
+
+    .reading-num { font-size: 12px; font-weight: 500; color: #999; min-width: 28px; padding-top: 2px; }
+    .reading-card.selected .reading-num { color: #0F6E56; }
+
+    .reading-body { flex: 1; }
+    .reading-title { font-size: 14px; color: #1a1a18; line-height: 1.4; }
+    .reading-card.selected .reading-title { color: #085041; font-weight: 500; }
+
+    .presenter-label {
+      font-size: 11px; font-weight: 500;
+      color: #0F6E56; letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-top: 10px; margin-bottom: 6px;
+    }
+
+    .badges { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    @keyframes badgePop {
+      0%   { opacity: 0; transform: scale(0.5); }
+      70%  { transform: scale(1.12); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .badge {
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: #f0f0ed;
+      color: #444;
+      border: 0.5px solid #ddd;
+      white-space: nowrap;
+      opacity: 0;
+    }
+    .badge.pop { animation: badgePop 0.3s ease both; opacity: 1; }
+    .reading-card.selected .badge {
+      background: #9FE1CB;
+      color: #085041;
+      border-color: #5DCAA5;
+    }
+
+    /* refill flash */
+    @keyframes flashGreen {
+      0%   { background: #c8f5e5; }
+      100% { background: #f5f5f2; }
+    }
+    .refill-flash { animation: flashGreen 0.6s ease; }
+
+    .info { font-size: 13px; color: #6b6b67; margin-top: 1.25rem; line-height: 1.6; }
+    .info strong { color: #1a1a18; font-weight: 500; }
+
+    .tag-refill {
+      display: inline-block;
+      font-size: 11px; font-weight: 500;
+      background: #9FE1CB; color: #085041;
+      border-radius: 20px; padding: 2px 9px;
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>EM6010: Strategic Management</h1>
+    <p>Reading presentations · Readings 15-21</p>
+    <p>Date: 24.04.2026</p>
+  </header>
+
+  <div class="mode-bar">
+    <label for="mode">Mode:</label>
+    <select id="mode">
+      <option value="random-reading">Pick a random reading and 3 random students</option>
+      <option value="random-students">Pick 3 students for a reading</option>
+      <option value="assign-all">Assign all readings at once</option>
+    </select>
+    <select id="reading-select" style="display:none;">
+      <option value="">— choose reading —</option>
+    </select>
+  </div>
+
+  <div class="pool-section" id="pool-section">
+    <div class="pool-title">Student pool: <span id="pool-count">21</span> of 21 remaining</div>
+    <div class="pool-dots" id="pool-dots"></div>
+  </div>
+
+  <div class="controls">
+    <button id="roll-btn" onclick="doPick()">
+      <span class="roll-icon">↻</span> Roll
+    </button>
+    <button id="reset-btn" onclick="resetAll()">Reset</button>
+  </div>
+
+  <div id="results"></div>
+  <div class="info" id="info"></div>
+
+</div>
+<script>
+  const readings = [
+    { num: 15, title: "Why Good Leaders Make Bad Decisions" },
+    { num: 16, title: "Strategy Tools for a Shifting Landscape" },
+    { num: 17, title: "How Entrepreneurs Craft Strategies That Work" },
+    { num: 18, title: "Your Strategy Needs a Strategy" },
+    { num: 19, title: "Lean Strategy" },
+    { num: 20, title: "Serving the World's Poor, Profitably" },
+    { num: 21, title: "Strategic Leadership: The Essential Skills" }
+  ];
+
+  const allStudents = [
+    "Madiha Ahmed","Sai Teja Bhukya","Munimadugu Sree Harsha","Ahla Hashir",
+    "Dasari Jayaramesh","Harsh Khatri","Amit Khoiwal","Parth Kishorbhaivekariya",
+    "Pathlavath Kumar","Polisetti Likhit Sai","Samhita M Kiran","Abhay Pandey",
+    "Abid Ali Karuvally Pathikkal","Shrey Pratap Singh","Abhiram Ramachandran Sivam",
+    "Soumik Saha","Divya Saraika","Kunal Singh","Potteli Sohan Sai","Aditi Tripathi",
+    "Pranav H V"
+  ];
+
+  const modeEl          = document.getElementById('mode');
+  const readingSelectEl = document.getElementById('reading-select');
+  const resultsEl       = document.getElementById('results');
+  const infoEl          = document.getElementById('info');
+  const rollBtn         = document.getElementById('roll-btn');
+  const poolSection     = document.getElementById('pool-section');
+  const poolCountEl     = document.getElementById('pool-count');
+  const poolDotsEl      = document.getElementById('pool-dots');
+
+  let availablePool = [];
+  let usedSet       = new Set();
+
+  // populate reading dropdown
+  readings.forEach(r => {
+    const opt = document.createElement('option');
+    opt.value = r.num;
+    opt.textContent = `Reading ${r.num}: ${r.title}`;
+    readingSelectEl.appendChild(opt);
+  });
+
+  modeEl.addEventListener('change', () => {
+    readingSelectEl.style.display = modeEl.value === 'random-students' ? '' : 'none';
+    poolSection.style.display     = modeEl.value === 'assign-all'      ? 'none' : '';
+    resetAll();
+  });
+
+  /* ── helpers ── */
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  let didRefill = false;
+
+  function drawStudents(n) {
+    didRefill = false;
+    const picked = [];
+    for (let i = 0; i < n; i++) {
+      if (availablePool.length === 0) {
+        didRefill = true;
+        availablePool = shuffle(allStudents.filter(s => !picked.includes(s)));
+        usedSet.clear();
+      }
+      const s = availablePool.shift();
+      picked.push(s);
+      usedSet.add(s);
+    }
+    return picked;
+  }
+
+  function renderDots() {
+    poolDotsEl.innerHTML = '';
+    allStudents.forEach(s => {
+      const d = document.createElement('div');
+      d.className = 'dot' + (usedSet.has(s) ? ' used' : '');
+      d.title = s;
+      poolDotsEl.appendChild(d);
+    });
+    poolCountEl.textContent = availablePool.length;
+  }
+
+  function spinRoll() {
+    rollBtn.classList.remove('spinning');
+    void rollBtn.offsetWidth;
+    rollBtn.classList.add('spinning');
+    setTimeout(() => rollBtn.classList.remove('spinning'), 550);
+  }
+
+  function renderCard(reading, presenters, isSelected, cardDelay) {
+    const div = document.createElement('div');
+    div.className = 'reading-card' + (isSelected ? ' selected' : '');
+    if (isSelected) {
+      div.classList.add('card-enter');
+      div.style.animationDelay = cardDelay + 'ms';
+    }
+
+    const badgesHtml = presenters.map((p, i) =>
+      `<span class="badge" data-delay="${cardDelay + 120 + i * 70}">${p}</span>`
+    ).join('');
+
+    div.innerHTML = `
+      <span class="reading-num">R${reading.num}</span>
+      <div class="reading-body">
+        <div class="reading-title">${reading.title}</div>
+        ${presenters.length ? `
+          <div class="presenter-label">Presenters</div>
+          <div class="badges">${badgesHtml}</div>` : ''}
+      </div>`;
+
+    // staggered badge pop
+    if (isSelected) {
+      div.querySelectorAll('.badge').forEach(b => {
+        const delay = parseInt(b.dataset.delay);
+        setTimeout(() => b.classList.add('pop'), delay);
+      });
+    }
+    return div;
+  }
+
+  /* ── main pick logic ── */
+  function doPick() {
+    spinRoll();
+    const mode = modeEl.value;
+
+    if (mode === 'assign-all') {
+      resultsEl.innerHTML = '';
+      infoEl.innerHTML   = '';
+      const pool = shuffle([...allStudents]);   // 21 students, 21 slots — perfect
+      readings.forEach((r, i) => {
+        const presenters = pool.slice(i * 3, i * 3 + 3);
+        const delay      = i * 70;
+        setTimeout(() => resultsEl.appendChild(renderCard(r, presenters, true, 0)), delay);
+      });
+      infoEl.innerHTML = `All <strong>21 students</strong> assigned exactly once - 3 per reading. Roll ↻ to reshuffle.`;
+      return;
+    }
+
+    if (mode === 'random-reading') {
+      resultsEl.innerHTML = '';
+      infoEl.innerHTML   = '';
+      const r          = readings[Math.floor(Math.random() * readings.length)];
+      const presenters = drawStudents(3);
+      renderDots();
+      if (didRefill) document.body.classList.add('refill-flash');
+      setTimeout(() => {
+        document.body.classList.remove('refill-flash');
+        resultsEl.appendChild(renderCard(r, presenters, true, 0));
+        infoEl.innerHTML = `<strong>Reading ${r.num}</strong> selected. Pool: <strong>${availablePool.length}</strong> students left.`
+          + (didRefill ? ' <span class="tag-refill">pool refilled</span>' : '')
+          + ' Roll ↻ again to pick another group.';
+      }, 60);
+      return;
+    }
+
+    if (mode === 'random-students') {
+      const val = parseInt(readingSelectEl.value);
+      if (!val) { infoEl.innerHTML = 'Please choose a reading first.'; return; }
+      resultsEl.innerHTML = '';
+      infoEl.innerHTML   = '';
+      const r          = readings.find(x => x.num === val);
+      const presenters = drawStudents(3);
+      renderDots();
+      if (didRefill) document.body.classList.add('refill-flash');
+      setTimeout(() => {
+        document.body.classList.remove('refill-flash');
+        resultsEl.appendChild(renderCard(r, presenters, true, 0));
+        infoEl.innerHTML = `3 students assigned to <strong>Reading ${r.num}</strong>. Pool: <strong>${availablePool.length}</strong> students left.`
+          + (didRefill ? ' <span class="tag-refill">pool refilled</span>' : '');
+      }, 60);
+    }
+  }
+
+  function resetAll() {
+    availablePool = shuffle([...allStudents]);
+    usedSet.clear();
+    didRefill = false;
+    resultsEl.innerHTML = '';
+    infoEl.innerHTML   = '';
+    readings.forEach(r => resultsEl.appendChild(renderCard(r, [], false, 0)));
+    if (modeEl.value !== 'assign-all') renderDots();
+  }
+
+  resetAll();
+</script>
+</body>
+</html>
