@@ -108,8 +108,11 @@ function renderFaculty(data) {
 
 
 // Mtech Students
+const DEFAULT_MTECH_BATCH = 2025;
+
 function getDefaultMtechBatch() {
-    return new URLSearchParams(window.location.search).get('batch') ?? (new Date().getFullYear() - 1);
+    const batch = Number(new URLSearchParams(window.location.search).get('batch'));
+    return Number.isFinite(batch) ? batch : DEFAULT_MTECH_BATCH;
 }
 
 function renderMtechStudents(data) {
@@ -289,6 +292,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const loading = document.getElementById('loading');
     loading.style.display = 'flex';
 
+    const page = location.pathname.split('/').pop();
+    const currentBatch = new URLSearchParams(window.location.search).get('batch');
+
+    if (page === 'm_tech_students.html' && currentBatch == null) {
+        window.location.replace(`${window.location.pathname}?batch=${DEFAULT_MTECH_BATCH}`);
+        return;
+    }
+
     const urlMapping = {
         'research.html':{
             url:'https://script.google.com/macros/s/AKfycbydfK1qUy1pRUIFhyHgHS2LC_th1aXWCnvy6rsO3XQDNn-zfjJ5sY5uG7ROPBaNh3pe5w/exec',
@@ -308,7 +319,6 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     };
 
-    const page = location.pathname.split('/').pop();
     const pageConfig = urlMapping[page];
 
     if (pageConfig) {
