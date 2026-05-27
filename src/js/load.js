@@ -108,36 +108,28 @@ function renderFaculty(data) {
 
 
 // Mtech Students
+function getDefaultMtechBatch() {
+    return new URLSearchParams(window.location.search).get('batch') ?? (new Date().getFullYear() - 1);
+}
+
 function renderMtechStudents(data) {
     const container = document.getElementById('profilesRow');
     const yearSelect = document.getElementById('yearSelect');
     if (!container) return;
     if (!yearSelect) return;
 
-    const batch  = new URLSearchParams(window.location.search).get('batch')
+    const batch = getDefaultMtechBatch();
 
     if (!Array.isArray(data.data)) {
         throw new Error('Fetched data is not an array');
     }
 
-    let upcoming_year = new URLSearchParams(window.location.search).get('year');
-    upcoming_year=null;
-    if(upcoming_year==null){
-        let date = new Date();
-        upcoming_year = date.getFullYear()+1;
-    }
-    
     yearSelect.innerHTML = `
-    <option value="${upcoming_year-3}">${upcoming_year-3}</option>
-    <option value="${upcoming_year-2}">${upcoming_year-2}</option>
-    <option value="${upcoming_year-1}">${upcoming_year-1}</option>
+    <option value="${Number(batch) - 2}">${Number(batch) - 2}</option>
+    <option value="${Number(batch) - 1}">${Number(batch) - 1}</option>
+    <option value="${batch}">${batch}</option>
     `;
-    if (batch!=null){
-        document.getElementById('yearSelect').value = batch;
-    }
-    else{
-        document.getElementById('yearSelect').value = upcoming_year-2;
-    }
+    document.getElementById('yearSelect').value = batch;
 
     container.innerHTML = '';
     data.data.slice(0).forEach(student => {
@@ -311,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function() {
             render: renderFaculty
         },
         'm_tech_students.html':{
-            url: `https://script.google.com/macros/s/AKfycbyWIkhVOvqFNxDuEaoJBeuYnHm9ZG_ZBmuCm6yb5gcehmXwDQJECwTLtpBerZvkQLUi7A/exec?batch=${new URLSearchParams(window.location.search).get('batch') ?? new Date().getFullYear()-2}`,
+            url: `https://script.google.com/macros/s/AKfycbyWIkhVOvqFNxDuEaoJBeuYnHm9ZG_ZBmuCm6yb5gcehmXwDQJECwTLtpBerZvkQLUi7A/exec?batch=${getDefaultMtechBatch()}`,
             render: renderMtechStudents
         },
     };
